@@ -1,2 +1,2 @@
-# takedanana.github.io
+# takeda.github.io
 aboutme:my profile site.
