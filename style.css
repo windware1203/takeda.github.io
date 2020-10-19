@@ -1,6 +1,4 @@
 hr{
-border-width: 0;
 height: 1.5px;
-background-image: linear-gradient(90deg,
-red 0%,green 50%,blue 100%);
+color :red 0%,green 50%,blue 100%);
 }
