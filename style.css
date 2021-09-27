@@ -3,24 +3,6 @@
     padding: 0;
 }
 
-footer{
-    display:block; 
-    clear:both; 
-    padding:5px; 
-    text-align: center;
-    font-family: 'Noto Serif TC', serif;
-    font-size: 100%;
-}
-
-p{
-    font-family: 'Noto Serif TC', serif;
-}
-
-body{
-    margin-right:2em;
-	margin-left:2em;
-}
-
 ul{
     font-family: 'Noto Serif TC', serif;
 }
