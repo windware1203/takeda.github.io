@@ -46,10 +46,11 @@ nav ul li a{
     color: #333;
 }
 .my-img{
-    height: 600px;
-    position: inherit;
-    bottom: 0;
-    margin-left: 60%;
+    display: inline-block;
+    height: 50%;
+    position: absolute;
+    align-content: center;
+    bottom: 10%;
 }
 
 
