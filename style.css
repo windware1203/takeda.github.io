@@ -2,20 +2,17 @@
     margin: 0;
     padding: 0;
 }
-
+h1{
+    font-family: 'Noto Serif TC', serif;
+    font-size: 350%;
+    margin-top: 20px;
+}
 ul{
     font-family: 'Noto Serif TC', serif;
 }
-.container{
-    height: 100vh;
-    width: 100%;
-    background-image: url();
-    background-position: center;
-    background-size: cover;
-    padding-left: 5%;
-    padding-right: 5%;
-    box-sizing: border-box;
-    position: relative;
+.logo{
+    width: 160px;
+    cursor: pointer;
 }
 
 .navbar{
@@ -28,13 +25,48 @@ ul{
 nav{
     flex: 1;
     padding-left: 60px;
+    margin: auto;
 }
 nav ul li{
     display: inline-block;
+    font-family: 'Noto Serif TC', serif;
+    font-size: 200%;
     list-style: none;
-    margin: 0px 20px;
+    margin: 0px 30px;
+}
+.linker li{
+    display: inline-block;
+    list-style: georgian;
+    margin: 0px 25px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 nav ul li a{
     text-decoration-color: none;
     color: #333;
 }
+.my-img{
+    height: 600px;
+    position: inherit;
+    bottom: 0;
+    margin-left: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
