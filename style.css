@@ -6,7 +6,11 @@ h1{
     font-family: 'Noto Serif TC', serif;
     font-size: 400%;
     text-align: center;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+.en{
+        font-family: 'Alice', serif;
+        font-size: 300%;
 }
 
 .student{
@@ -16,6 +20,7 @@ h1{
 }
 h2{
     text-align: center;
+    font-family: 'Rosario', sans-serif;
 }
 .lsit{
     display: flex;
