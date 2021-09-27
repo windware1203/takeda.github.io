@@ -4,15 +4,32 @@
 }
 h1{
     font-family: 'Noto Serif TC', serif;
-    font-size: 350%;
+    font-size: 400%;
+    text-align: center;
     margin-top: 20px;
 }
-ul{
-    font-family: 'Noto Serif TC', serif;
+
+.student{
+    font-family: 'Rosario', sans-serif;;
+    font-size: 200%;
+    color: white;
+}
+h2{
+    text-align: center;
+}
+.lsit{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 .logo{
     width: 160px;
     cursor: pointer;
+}
+.container{
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .navbar{
@@ -30,9 +47,15 @@ nav{
 nav ul li{
     display: inline-block;
     font-family: 'Noto Serif TC', serif;
-    font-size: 200%;
+    font-size: 120%;
     list-style: none;
     margin: 0px 30px;
+}
+
+.linker{
+   right: 50%;
+    left: 50%;
+    
 }
 .linker li{
     display: inline-block;
@@ -47,13 +70,23 @@ nav ul li a{
 }
 .my-img{
     display: inline-block;
-    height: 50%;
-    position: absolute;
+    height: 500px;
+    position: inherit;
     align-content: center;
+    margin-top: 10%;
     bottom: 10%;
 }
-
-
+html, body {
+  height: 100%;
+  margin: 0;
+}
+.wrapper {
+  min-height: calc(100% - 50px); /*減去footer高度*/
+}
+.footer {
+  height: 50px; /*設定footer本身高度*/
+  background-color: yellow;
+}
 
 
 
