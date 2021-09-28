@@ -5,3 +5,4 @@
 - img
     - pictures
 - index.html
+- style.css
