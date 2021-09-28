@@ -1,2 +1,7 @@
-# takeda.github.io
-````aboutme:my profile site.````
+# My page
+## profile
+- Name: Takeda Nana
+## Architecture
+- img
+    - pictures
+- index.html
