@@ -7,23 +7,23 @@ a {
 }
 h1{
     font-family: 'Noto Serif TC', serif;
-    font-size: 400%;
+    font-size: 300%;
     text-align: center;
     margin-top: 10px;
 }
 .en{
         font-family: 'Alice', serif;
-        font-size: 300%;
+        font-size: 250%;
 }
 
 .student{
     font-family: 'Rosario', sans-serif;;
-    font-size: 200%;
+    font-size: 150%;
     color: white;
 }
 .school{
     font-family: 'Rosario', sans-serif;;
-    font-size: 100%;
+    font-size: 80%;
     color: white;
 }
 h2{
@@ -57,7 +57,7 @@ h2{
 }
 nav{
     flex: 1;
-    padding-left: 60px;
+    padding-left: 30%;
     margin: auto;
 }
 nav ul li{
@@ -78,7 +78,7 @@ nav ul li::after{
     bottom: -10px;
     transition: 0.5s;
 }
-nav ul li::hover::after{
+nav ul li:hover::after{
     width: 100%;
 }
 
@@ -95,10 +95,10 @@ nav ul li a{
 }
 .my-img{
     display: inline-block;
-    height: 500px;
+    height: 350px;
     position: static;
     align-content: center;
-    margin-top: 10%;
+    margin-top: 2%;
     bottom: 10%;
 }
 html, body {
