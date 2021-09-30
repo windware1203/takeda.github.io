@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -111,6 +112,11 @@ html, body {
 .footer {
   height: 50px; /*設定footer本身高度*/
   background-color: yellow;
+}
+.title{
+    padding-bottom: 3%;
+    font-family: 'Delius', cursive;
+    color: #808080;
 }
 
 
