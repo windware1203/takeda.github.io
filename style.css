@@ -65,21 +65,11 @@ nav ul li{
 }
 
 .linker{
-    width : 29%;
-    right   : 50%;
-    left    : 50%;
-    display : block;
-    margin  :0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
-.linker li{
-    display: inline-block;
-    list-style: georgian;
-    align-content: center;
-    align-items: center;
-    margin: 0px 25px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-    
+td{
+    padding: 30px;
 }
 nav ul li a{
     text-decoration-color: none;
