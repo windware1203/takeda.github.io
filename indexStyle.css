@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -32,6 +33,11 @@ h2{
     margin-top: 3px;
     text-align: center;
     font-family: 'Rosario', sans-serif;
+}
+.ma{
+    color: aliceblue;
+    font-size: 170%;
+    font-family: 'Merienda', cursive;
 }
 .lsit{
     display: flex;
