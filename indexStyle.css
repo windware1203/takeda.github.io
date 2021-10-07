@@ -7,6 +7,12 @@
 a {
     text-decoration:none;
 }
+
+iframe {
+    
+    width: 50%;
+}
+
 h1{
     font-family: 'Noto Serif TC', serif;
     font-size: 300%;
