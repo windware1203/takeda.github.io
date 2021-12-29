@@ -28,7 +28,7 @@ iframe {
 
 h1{
     font-family: 'Noto Serif TC', serif;
-    font-size: 300%;
+    
     text-align: center;
     margin-top: 10px;
 }
@@ -38,8 +38,8 @@ h1{
 }
 
 h2{
-    margin-bottom: 3px;
-    margin-top: 3px;
+    margin-bottom: 20px;
+    margin-top: 20px;
     text-align: center;
     font-family: 'Rosario', sans-serif;
 }
@@ -75,8 +75,8 @@ h2{
     font-family: 'Rosario', sans-serif;;
     font-size: 150%;
     color: white;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 nav{
     flex: 1;
@@ -132,6 +132,7 @@ html, body {
 }
 .title{
     padding-bottom: 3%;
+    font-size: 300%;
     font-family: 'Delius', cursive;
     color: #808080;
 }
