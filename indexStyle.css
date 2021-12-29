@@ -71,6 +71,13 @@ h2{
     align-items: center;
     justify-content: space-between;
 }
+.student{
+    font-family: 'Rosario', sans-serif;;
+    font-size: 150%;
+    color: white;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 nav{
     flex: 1;
     padding-left: 30%;
