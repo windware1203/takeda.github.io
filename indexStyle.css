@@ -119,7 +119,10 @@ nav ul li a{
     text-decoration-color: none;
     color: #333;
 }
-
+img{
+    margin-bottom: 3%;
+    margin-top: 3%;
+}
 html, body {
   height: 100%;
   margin: 0;
