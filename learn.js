@@ -5,8 +5,8 @@ function draw() {
 
     ctx.beginPath();
     ctx.moveTo(75,50);
-    ctx.lineTo(100,75);
-    ctx.lineTo(100,25);
+    ctx.lineTo(80,100);
+    ctx.lineTo(70,100);
     ctx.fill();
   }
 }
