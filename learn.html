@@ -6,7 +6,10 @@
 	<link rel="Shortcut Icon" type="image/x-icon" href="img/home.ico" />
 	
 	<script src="learn.js" async></script>
-	
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+	</script>
+	<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
 	
 	<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
@@ -42,7 +45,7 @@
     
 </head>
     
-<body bgcolor=#BCB8B1>
+<body bgcolor=#BCB8B1 onload="draw();">
 	
 	<br><br>
 	
@@ -61,8 +64,34 @@
     </header>
     <h1 class="title">Information Security Knowledge</h1>
     
+<<<<<<< HEAD
+        <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Plain text and Cipher text</h1>
+        <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Cryptography</h1>
+    <div class="container">
+           <div class="box">    
+            <h1>ROT13</h1>
+                <p style="align-content: : center; margin-bottom: 3%;margin-top: 3%;">
+                    <P>
+                        ROT13(rotate by 13 places) is a algorithm of substitution cipher. The shift value is 13.
+                    </P>
+                     <img src="img/rot13.png" alt="" width="40%">
+                </p>
+            </div> 
+    </div>
+=======
     <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Plain text and Cipher text</h1>
+	<p>
+	    <canvas id="cyoShow" width="150" height="150"></canvas>
+		
+	</p>
     <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Cryptography</h1>
+	<p>
+	
+	</p>
+<<<<<<< HEAD
+>>>>>>> aacbcfb645019813365d6625bfb9d89b67d0ec3b
+=======
+>>>>>>> aacbcfb645019813365d6625bfb9d89b67d0ec3b
    
 	
     

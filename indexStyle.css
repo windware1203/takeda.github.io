@@ -61,6 +61,7 @@ h2{
     display: flex;
     justify-content: center; 
     align-items: center; 
+    text-align: center;
 }
 
 .navbar{
@@ -69,6 +70,7 @@ h2{
     padding: 35px 0;
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
 }
 .student{
@@ -145,13 +147,6 @@ html, body {
     font-family: 'Delius', cursive;
     color: #406060;
 }
-
-
-
-
-
-
-
 
 
 
