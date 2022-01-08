@@ -63,14 +63,18 @@
     <h1 class="title">Information Security Game</h1>
     
     <div class="container">
-        <div class="box">
+        <div class="box"  id="login">
            <h1>Login</h1>
            <p>
                 Name : <input type="text" id="name"><br>
-                <input type="radio" name="type" value="red" checked>red team
-                <input type="radio" name="type" value="blue" style="margin-left: 30%;">blue team
-                <a href="" ondrop="submit();"><img src="img/submit.png"></a>
+                <input type="radio" name="type" value="Red team (Attack)" checked>red team
+                <input type="radio" name="type" value="Blue team (Defence)" style="margin-left: 30%;">blue team
+                <button onclick = "submit();"><img src="img/submit.png"></button>
             </p>
+        </div>
+        <div class="box"  id="gameBox" style="visibility: hidden;">
+            <h1 id="nameHTML"></h1>
+            <h1 id="teamHTML"></h1>
         </div>
     </div>
     
