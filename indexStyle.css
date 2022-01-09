@@ -21,7 +21,29 @@ input{
     margin-top: 25px;
     font-size: 120%;
 }
-
+.word
+{
+    
+}
+.button:hover {
+    background-color: #306060;
+    color: white;
+}
+a:active, a:hover {
+    outline-width: 0;
+    color: #406060;
+}
+.button {
+    background-color: white;
+    color: black;
+    border: 5% border #406060;
+    padding: 5% 10%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100%;
+    margin-left: 40%;
+}
 iframe {
     
     width: 50%;

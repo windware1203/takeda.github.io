@@ -6,10 +6,8 @@
 	<link rel="Shortcut Icon" type="image/x-icon" href="img/home.ico" />
 	
 	<script src="learn.js" async></script>
-	<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
-	</script>
-	<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+	
+	
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
 	
 	<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
@@ -46,7 +44,7 @@
     
 </head>
     
-<body bgcolor=#BCB8B1 onload="draw();">
+<body bgcolor=#BCB8B1>
 	
 	<br><br>
 	
@@ -67,9 +65,21 @@
     
 
     <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Plain text and Cipher text</h1>
-    <div class="container">
+    <div class="container" style="margin-top: 5%;margin-bottom: 5%;">
            <div class="box">
-           
+              <h1>Plain text 明文</h1>
+                  <p>
+                      不論在軟體抑或網頁開發，多少都會碰到機密資料的處理
+                  </p>
+           </div>
+           <br>
+    </div>
+    <div class="container" style="margin-top: 5%;margin-bottom: 5%;">   
+           <div class="box">
+               <h1>Cipher text 密文</h1>
+                  <p>
+                      
+                  </p>
            </div>
     </div>
     <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Cryptography</h1>
@@ -80,16 +90,16 @@
                     <div class="box">
                        <p>
                             ROT13 是一種位移值為13的簡單型替換式密碼演算法。由於其加密方式十分簡單易懂，適合密碼學初學者學習概念使用；<br>
-                           並不常使用於實務，而目前常使用的算法為<a href="#RSA">RSA</a>及數位簽章用的EEC，其都含有數學難題的性質來保全其安全性。<br>
-                           此外，ROT13只對字母進行變換，其他字元不受加密。因此，衍伸出變形<a href="https://www.dcode.fr/rot-47-cipher" target="_blank">ROT47，使用ASCII code 來進行變化。</a><br>
+                           並不常使用於實務，而目前常使用的算法為<a class="word" href="#RSA">RSA</a>及數位簽章用的EEC，其都含有數學難題的性質來保全其安全性。<br>
+                           此外，ROT13只對字母進行變換，其他字元不受加密。因此，衍伸出變形<a class="word" href="https://www.dcode.fr/rot-47-cipher" target="_blank">ROT47</a>，使用ASCII code 來進行變化。<br>
                             ROT13(rotate by 13 places) is a algorithm of substitution cipher. The shift value is 13.<br>
                             <img src="img/function.png" alt="" style="margin-top: 2%;"><br>
                             
-                            <p style="background-color: #BAB0B0;width: 50%;margin-left: 25%;">
+                            <p style="background-color: #999999;width: 50%;margin-left: 25%;">
                                 <span style="margin-top: 3%; font-size: 120%;font-weight: 700;">Simulation</span><br>
                                 Enter your string:<input type="text" id="rot13_input"><br>
                                 Result: <input type="text" id="rot13_output" disabled="disabled"><br><br>
-                                <button onclick="rot13();">submit</button>
+                                <button style="font-size: 120%;" class="button" onclick="rot13();">submit</button>
                             </p>
                             
                        </p>
