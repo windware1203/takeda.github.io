@@ -41,8 +41,8 @@ a:active, a:hover {
 .button {
     background-color: white;
     color: black;
-    border: 5% border #406060;
-    padding: 5% 10%;
+    border: 10% border #406060;
+    padding: 4% 8%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
