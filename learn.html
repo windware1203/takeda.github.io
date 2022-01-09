@@ -35,6 +35,7 @@
         }
 		p{
             font-family: 'Noto Serif TC', serif;
+            font-size: 130%;
         }
 		body{
 			margin-right:2em;
@@ -65,19 +66,50 @@
     <h1 class="title">Information Security Knowledge</h1>
     
 
-        <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Plain text and Cipher text</h1>
-        <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Cryptography</h1>
+    <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Plain text and Cipher text</h1>
+    <div class="container">
+           <div class="box">
+           
+           </div>
+    </div>
+    <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Cryptography</h1>
     <div class="container">
            <div class="box">    
             <h1>ROT13</h1>
+                <p style="align-content: center; margin-bottom: 3%;margin-top: 3%;">
+                    <div class="box">
+                       <p>
+                            ROT13 是一種位移值為13的簡單型替換式密碼演算法。由於其加密方式十分簡單易懂，適合密碼學初學者學習概念使用；<br>
+                           並不常使用於實務，而目前常使用的算法為<a href="#RSA">RSA</a>及數位簽章用的EEC，其都含有數學難題的性質來保全其安全性。<br>
+                           此外，ROT13只對字母進行變換，其他字元不受加密。因此，衍伸出變形<a href="https://www.dcode.fr/rot-47-cipher" target="_blank">ROT47，使用ASCII code 來進行變化。</a><br>
+                            ROT13(rotate by 13 places) is a algorithm of substitution cipher. The shift value is 13.<br>
+                            <img src="img/function.png" alt="" style="margin-top: 2%;"><br>
+                            
+                            <p style="background-color: #BAB0B0;width: 50%;margin-left: 25%;">
+                                <span style="margin-top: 3%; font-size: 120%;font-weight: 700;">Simulation</span><br>
+                                Enter your string:<input type="text" id="rot13_input"><br>
+                                Result: <input type="text" id="rot13_output" disabled="disabled"><br><br>
+                                <button onclick="rot13();">submit</button>
+                            </p>
+                            
+                       </p>
+                       
+                    </div>
+                     <img class="img-rot13" src="img/rot13.png" alt="" width="40%">
+                     
+                </p>
+            </div> 
+    </div>
+    <div class="container">
+           <div class="box">    
+            <h1 id="RSA">RSA</h1>
                 <p style="align-content: : center; margin-bottom: 3%;margin-top: 3%;">
                     <div class="box">
                        <p>
-                        ROT13(rotate by 13 places) is a algorithm of substitution cipher. The shift value is 13.<br>
-                        <img src="img/function.png" alt="" style="margin-top: 2%;">
+                            RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>
                        </p>
                     </div>
-                     <img class="img-rot13" src="img/rot13.png" alt="" width="40%">
+                     
                      
                 </p>
             </div> 

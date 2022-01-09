@@ -9,6 +9,7 @@ a {
 }
 p, button{
     font-size: 120%;
+    font-family: serif;
 }
 button{
     margin-bottom: 20px;
