@@ -90,15 +90,19 @@
                     <div class="box">
                        <p>
                             ROT13 是一種位移值為13的簡單型替換式密碼演算法。由於其加密方式十分簡單易懂，適合密碼學初學者學習概念使用；<br>
-                           並不常使用於實務，而目前常使用的算法為<a class="word" href="#RSA">RSA</a>及數位簽章用的EEC，其都含有數學難題的性質來保全其安全性。<br>
+                           並不常使用於實務，而目前常使用的算法為<a class="word" href="#RSA">RSA</a>
+                           及基於ECC<a target="_blank" href="https://ithelp.ithome.com.tw/articles/10251031"><sub>[1]</sub></a>
+                           的ECDSA<a target="_blank" href="https://medium.com/cryptocow/%E6%A9%A2%E5%9C%93%E6%9B%B2%E7%B7%9A%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95-ecdsa-%E8%88%87-rfc6979-%E6%94%B9%E9%80%B2%E6%8F%90%E6%A1%88-dabeea17a8e3"><sub>[2]</sub></a>常用於數位簽章，其都含有數學難題的性質來保全其安全性。<br>
                            此外，ROT13只對字母進行變換，其他字元不受加密。因此，衍伸出變形<a class="word" href="https://www.dcode.fr/rot-47-cipher" target="_blank">ROT47</a>，使用ASCII code 來進行變化。<br>
                             ROT13(rotate by 13 places) is a algorithm of substitution cipher. The shift value is 13.<br>
                             <img src="img/function.png" alt="" style="margin-top: 2%;"><br>
                             
                             <p style="background-color: #999999;width: 50%;margin-left: 25%;">
-                                <span style="margin-top: 3%; font-size: 120%;font-weight: 700;">Simulation</span><br>
-                                Enter your string:<input type="text" id="rot13_input"><br>
-                                Result: <input type="text" id="rot13_output" disabled="disabled"><br><br>
+                                <span style="color: white;margin-top: 3%; font-size: 120%;font-weight: 700;">Simulation</span><br>
+                                <span style="color: white;">Enter your string:</span>
+                                <input type="text" id="rot13_input"><br>
+                                <span style="color: white;">Result:          :</span>
+                                <input type="text" style="color: red;" id="rot13_output" disabled="disabled"><br><br>
                                 <button style="font-size: 120%;" class="button" onclick="rot13();">submit</button>
                             </p>
                             
@@ -116,14 +120,14 @@
                 <p style="align-content: : center; margin-bottom: 3%;margin-top: 3%;">
                     <div class="box">
                        <p>
-                            RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>RSA<br>
+                       
                        </p>
                     </div>
-                     
-                     
                 </p>
             </div> 
     </div>
+    
+    
 
    
 	
