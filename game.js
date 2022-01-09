@@ -1,18 +1,17 @@
 var name = "";
-var team = "";
 function submit()
 {
     var nameInput = document.getElementById("name");
     name = nameInput.value;
     
-    
-    var login = document.getElementById("login");
-    login.style.display = "none";
-    
-    team = document.querySelector('input[name="type"]:checked').value;
-    
-    document.getElementById("nameHTML").innerHTML = name;
-    document.getElementById("typeHTML").innerHTML = type;
+    if(name == "")alert("Please enter your name!");
+    else
+    {
+        var login = document.getElementById("login");
+        login.style.display = "none";
+        document.getElementById("gameBox").style.visibility = "visible";
 
-    document.getElementById("gameBox").style.display = "block";
+        document.getElementById("nameHTML").innerHTML = "Hi, " + name;
+    }
+    
 }
