@@ -83,7 +83,8 @@
            <div class="box">
                <h1>密文 Cipher text </h1>
                   <p>
-                      傳遞過程經過加密程序的文本稱為密文(Cipher Text)
+                      傳遞過程經過加密程序的文本稱為密文(Cipher Text)。<br>
+                      經過加密算法產生金鑰(Key)，又分為對稱(A Public Key)與非對稱金鑰(A Public Key & A Private Key)之差別。
                   </p>
                   <p style="align-content: center; margin-bottom: 3%;margin-top: 3%;">
                     <div class="box">
@@ -141,13 +142,25 @@
     </div>
     <div class="container">
            <div class="box">    
-            <h1 id="RSA">RSA</h1>
-                <p style="align-content: : center; margin-bottom: 3%;margin-top: 3%;">
-                    <div class="box">
-                       <p>
-                       
-                       </p>
-                    </div>
+            <h1 id="RSA">RSA <sub><a target="_blank" href="https://ithelp.ithome.com.tw/articles/10250721">[3]</a></sub></h1>
+                <p style="width: 70%; align-content: : center; margin-bottom: 3%;margin-top: 3%;">
+                    
+                       <ol style="list-style: upper-roman;font-size: 120%;">
+                           <li><p>選出兩個較大的質數 p 和 q</p></li><br>
+                           <li><p>計算兩個質數的乘積 n = p × q</p></li><br>
+                           <li><p>計算出小於 n 且與 n 互質的整數個數<br>&phi; (n)= (p - 1)(q - 1)</p></li><br>
+                           <li>
+                               <p>選出一個整數 e<br>（拿來當做公鑰)</p>              
+                                   <img src="img/r1.png" alt="">
+                               
+                           </li><br>
+                           
+                           <li><p>計算 d (私鑰)</p>
+                           <img src="img/r2.png" alt="">
+                           </li><br>
+                           <li><p>可得</p><img src="img/r3.png" alt=""></li><br>
+                       </ol>
+                    
                 </p>
             </div> 
     </div>

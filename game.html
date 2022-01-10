@@ -33,6 +33,7 @@
         }
 		p{
             font-family: 'Noto Serif TC', serif;
+            font-size: 120%;
         }
 		body{
 			margin-right:2em;
@@ -43,7 +44,7 @@
     
 </head>
     
-<body bgcolor=#BCB8B1>
+<body onload="init();" bgcolor=#BCB8B1>
 	
 	<br><br>
 	
@@ -71,7 +72,52 @@
             </p>
         </div>
         <div class="box"  id="gameBox" style="visibility: hidden;">
-            <h1 id="nameHTML"></h1>
+            <h1> <span id="nameHTML"></span>&nbsp;&nbsp;&nbsp;Points:<span id="score"></span></h1>
+            <!--Q1-->
+            <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">.01&nbsp;&nbsp;ROT13</h1>
+            <div class="container">
+                   <div class="box">
+                       <p> 
+                            String:<span id="rot13_str"></span><br>
+                            Result:<input type="text" id="rot13_output">
+                            <button style="margin-left: 36%;font-size: 120%;" class="button" onclick="rot13();">submit</button>
+                            <span id="fb1"></span>
+                        </p>
+                    </div> 
+            </div>
+            
+            <!--Q2-->
+            <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">.02</h1>
+            <div class="container">
+                   <div class="box">    
+                    
+                    </div> 
+            </div>
+            
+            <!--Q3-->
+            <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">.03</h1>
+            <div class="container">
+                   <div class="box">    
+                    
+                    </div> 
+            </div>
+            
+            <!--Q4-->
+            <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">.04</h1>
+            <div class="container">
+                   <div class="box">    
+                    
+                    </div> 
+            </div>
+            
+            <!--Q5-->
+            <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">.05</h1>
+            <div class="container">
+                   <div class="box">    
+                    
+                    </div> 
+            </div>
+            
         </div>
     </div>
     
