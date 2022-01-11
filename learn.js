@@ -20,6 +20,20 @@ function cipher()
     {
         the_cipher += String.fromCharCode(the_string.charCodeAt(i) ^ the_key);
     }
-    
+    document.getElementById("plainShow").innerHTML = the_string;
+    document.getElementById("cipherShow").innerHTML = the_cipher;
     document.getElementById("cipher_output").value = the_cipher;
+}
+
+function quick(a,b,c)
+{
+	let ans=1;   
+	a=a%c;   
+	while(b!=0)
+	{
+		if(b&1) ans=(ans*a)%c;   
+		b>>=1;    
+		a=(a*a)%c;   
+	}
+	return ans;
 }
