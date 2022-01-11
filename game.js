@@ -5,6 +5,12 @@ var rankImg = ["img/0.png", "img/1.png", "img/2.png", "img/3.png", "img/4.png",
                "img/5.png", "img/6.png", "img/7.png", "img/8.png", "img/9.png",
                "img/10.png", "img/11.png", "img/12.png", "img/13.png", "img/14.png",
                "img/15.png", "img/16.png", "img/17.png", "img/18.png", "img/19.png"];
+
+var rankName = ["菜雞I", "菜雞II", "菜雞III", "平民I", "平民II",
+               "平民III", "老鳥I", "老鳥II", "老鳥III", "一二三",
+               "二二三", "三二三", "一枝獨秀", "兩枝獨秀", "三枝獨秀",
+               "資科猩猩", "MP沒有力量", "你是神", "你是鬼", "你是武田"];
+
 var rank = 0;
 
 function init()
@@ -56,6 +62,11 @@ function genRot13()
 
     document.getElementById("rot13_str").innerHTML = rot13_q;
 }
+function qq()
+{
+    pionts += 10;
+        rePoint();
+}
 function q2()
 {
     let ref = document.getElementById("fb2");
@@ -102,9 +113,9 @@ function submit()
 function rePoint()
 {
     document.getElementById("score").innerHTML = pionts;
-    /*rank = Math.floor(pionts/10);
-    console.log(rank);
+    rank = Math.floor(pionts/10);
+    if(rank > 19) rank=19;
     document.getElementById("rank").innerHTML = rank;
-
-    document.getElementById("rankImg").src = rankImg[rank];*/
+    document.getElementById("rankName").innerHTML = rankName[rank];
+    document.getElementById("rankImg").src = rankImg[rank];
 }
