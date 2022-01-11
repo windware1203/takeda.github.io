@@ -16,7 +16,7 @@ function cipher()
     let len = the_string.length;
     let the_cipher = "";
     let the_plain = "";
-    for(var i = 0 ; i<len ;i++)
+    for(let i = 0 ; i<len ;i++)
     {
         the_cipher += String.fromCharCode(the_string.charCodeAt(i) ^ the_key);
     }
@@ -39,7 +39,7 @@ function quick(a,b,c)
 }
 function isPrime(num) 
 {
-    for(var i = 2; i < num; i++)
+    for(let i = 2; i < num; i++)
       if(num % i === 0) return false;
     return num > 1;
   }
@@ -47,14 +47,28 @@ function rsa()
 {
     let p = document.getElementById("rsaNum_p").value;
     let q = document.getElementById("rsaNum_q").value;
-    if(!isPrime(p) || !isPrime(q))alert("Enter prime number please");
+    let process = document.getElementById("rsa_process");
+    process.innerHTML = "";
+    if(!isPrime(p) || !isPrime(q))alert("Enter prime numbers( > 0) please");
     else
     {
         let n = p * q;
         let r = (p - 1) * (q - 1);
-        let e = getRandomInt(r - 1) + 1;
-        let d = 1;
-        while((d * e) % r != 1)
+        let e = r-1;
+        var d = 0;
+        while(true)
+        {
+            if(((d * e) % r == 1) && (e != d))break;
             d++;
+        }
+        process.innerHTML += ("p = " + p + ", q = " + q +"<br>");//#BCB8B1
+        process.innerHTML += ("<span style='background-color: yellow;'> n = p * q </sapn><br>"
+        + "<span style='background-color: #406060;'>"
+        + n + " = " + p + " * " + q +"<br></span>");
+        process.innerHTML += ("<span style='background-color: yellow;'>r = (p-1) * (q-1) </sapn><br>" 
+        + "<span style='background-color: #406060;'>"
+        + r + " = " + (p-1) + " * " + (q-1) +"<br></span>");
+        process.innerHTML += ("<span style='background-color: #406060;'>e = " + e +"<br></span>");
+        process.innerHTML += ("<span style='background-color: #406060;'>d = " + d +"<br></span>");
     }
 }
