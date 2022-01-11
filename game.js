@@ -69,7 +69,7 @@ function submit()
     {
         var login = document.getElementById("login");
         login.style.display = "none";
-        document.getElementById("gameBox").style.visibility = "visible";
+        document.getElementById("gameBox").style.display = "inline";
 
         document.getElementById("nameHTML").innerHTML = "Hi, " + name;
     }
