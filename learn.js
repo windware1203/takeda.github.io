@@ -74,6 +74,8 @@ function rsa()
         process.innerHTML += ("<span style='background-color: #00FFFF;'>&nbsp;&nbsp;e = " + e +"&nbsp;&nbsp;<br><br></span>");
         process.innerHTML += ("<span style='background-color: #00FFFF;'>&nbsp;&nbsp;d = " + d +"&nbsp;&nbsp;<br><br></span>");
         the_cipher = quick(the_string,e,n);
+        process.innerHTML += ("<span style='background-color: yellow;'>&nbsp;&nbsp;plain<sup>e</sup> (mod n) &equiv; cipher </sapn>&nbsp;&nbsp;<br><br>");
+        process.innerHTML += ("<span style='background-color: #00FFFF;'>&nbsp;&nbsp;"+ the_string +"<sup>"+e+"</sup> (mod "+n+") &equiv; " + the_cipher + "</sapn>&nbsp;&nbsp;<br><br>");
         document.getElementById("rsa_output").value = the_cipher;
     }
 }
