@@ -1,6 +1,7 @@
 <!DOCTYPE html> 
 <html>
 <head>
+     
    
     <script src="game.js" async></script>
     <link rel="stylesheet" href="indexStyle.css">
@@ -73,6 +74,10 @@
         </div>
         <div class="box"  id="gameBox" style="display: none;">
             <h1> <span id="nameHTML"></span>&nbsp;&nbsp;&nbsp;Points:<span id="score"></span></h1>
+            <h1>RANK:<span id="rank"></span><br></h1>
+            <img id="randImg" src="img/0.png"></img> <br>
+            
+            
             <!--Q1-->
             <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">.01&nbsp;&nbsp;ROT13</h1>
             <div class="container">
@@ -80,17 +85,23 @@
                        <p> 
                             String:<span id="rot13_str"></span><br>
                             Result:<input type="text" id="rot13_output">
-                            <button style="margin-left: 36%;font-size: 120%;" class="button" onclick="rot13();">submit</button>
+                            <button id="b1" style="margin-left: 36%;font-size: 120%;" class="button" onclick="rot13();">submit</button>
                             <span id="fb1"></span>
                         </p>
                     </div> 
             </div>
             
             <!--Q2-->
-            <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">.02</h1>
+            <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">.02&nbsp;&nbsp;Mask plz</h1>
             <div class="container">
                    <div class="box">    
-                    
+                        <p> 
+                            hint:<a target="_blank" href="https://mh-nexus.de/en/hxd/">HxD editor</a><br>
+                            Problem: <a href="img/mask.png" download="mask">mask.png</a> <br>
+                            flag:<input style="width: 100%;" placeholder="nanaCTF{flag}" type="text" id="q2_flag">
+                            <button  style="margin-left: 36%;font-size: 120%;" class="button" onclick="q2();">submit</button>
+                            <span id="fb2"></span>
+                        </p>
                     </div> 
             </div>
             
