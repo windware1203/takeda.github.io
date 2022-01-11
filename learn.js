@@ -47,8 +47,8 @@ function rsa()
 {
     let p = document.getElementById("rsaNum_p").value;
     let q = document.getElementById("rsaNum_q").value;
-    let the_string = document.getElementById("rsa_input");
-    let the_cipher = "";
+    let the_string = parseInt(document.getElementById("rsa_input").value,10);
+    let the_cipher = 0;
     let process = document.getElementById("rsa_process");
     process.innerHTML = "";
     if(p == "" || q == "")alert("Enter numbers please!");
@@ -73,13 +73,7 @@ function rsa()
         + r + " = " + (p-1) + " * " + (q-1) +"&nbsp;&nbsp;<br><br></span>");
         process.innerHTML += ("<span style='background-color: #00FFFF;'>&nbsp;&nbsp;e = " + e +"&nbsp;&nbsp;<br><br></span>");
         process.innerHTML += ("<span style='background-color: #00FFFF;'>&nbsp;&nbsp;d = " + d +"&nbsp;&nbsp;<br><br></span>");
-        let len = the_string.length;
-        for(let i = 0 ; i<len ;i++)
-            the_cipher[i] = "K";
-        for(let i = 0 ; i<len ;i++)
-        {
-            the_cipher[i] = String.fromCharCode(quick(the_string.charCodeAt(i),e,n));
-        }
+        the_cipher = quick(the_string,e,n);
         document.getElementById("rsa_output").value = the_cipher;
     }
 }
