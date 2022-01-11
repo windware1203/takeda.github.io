@@ -49,7 +49,8 @@ function rsa()
     let q = document.getElementById("rsaNum_q").value;
     let process = document.getElementById("rsa_process");
     process.innerHTML = "";
-    if(!isPrime(p) || !isPrime(q))alert("Enter prime numbers( > 0) please");
+    if(p == "" || q == "")alert("Enter numbers please!");
+    else if(!isPrime(p) || !isPrime(q))alert("Enter prime numbers( > 0) please");
     else
     {
         let n = p * q;
@@ -61,14 +62,14 @@ function rsa()
             if(((d * e) % r == 1) && (e != d))break;
             d++;
         }
-        process.innerHTML += ("p = " + p + ", q = " + q +"<br>");//#BCB8B1
-        process.innerHTML += ("<span style='background-color: yellow;'> n = p * q </sapn><br>"
-        + "<span style='background-color: #406060;'>"
-        + n + " = " + p + " * " + q +"<br></span>");
-        process.innerHTML += ("<span style='background-color: yellow;'>r = (p-1) * (q-1) </sapn><br>" 
-        + "<span style='background-color: #406060;'>"
-        + r + " = " + (p-1) + " * " + (q-1) +"<br></span>");
-        process.innerHTML += ("<span style='background-color: #406060;'>e = " + e +"<br></span>");
-        process.innerHTML += ("<span style='background-color: #406060;'>d = " + d +"<br></span>");
+        process.innerHTML += ("<span style='background-color: #00FFFF;'>&nbsp;&nbsp; p = " + p + ", q = " + q +"&nbsp;&nbsp;<br><br></span>");//#BCB8B1
+        process.innerHTML += ("<span style='background-color: yellow;'> &nbsp;&nbsp;n = p * q </sapn>&nbsp;&nbsp;<br><br>"
+        + "<span style='background-color: #00FFFF;'>&nbsp;&nbsp;"
+        + n + " = " + p + " * " + q +"&nbsp;&nbsp;<br><br></span>");
+        process.innerHTML += ("<span style='background-color: yellow;'>&nbsp;&nbsp;&phi; (n) = r = (p-1) * (q-1) </sapn>&nbsp;&nbsp;<br><br>" 
+        + "<span style='background-color: #00FFFF;'>&nbsp;&nbsp;"
+        + r + " = " + (p-1) + " * " + (q-1) +"&nbsp;&nbsp;<br><br></span>");
+        process.innerHTML += ("<span style='background-color: #00FFFF;'>&nbsp;&nbsp;e = " + e +"&nbsp;&nbsp;<br><br></span>");
+        process.innerHTML += ("<span style='background-color: #00FFFF;'>&nbsp;&nbsp;d = " + d +"&nbsp;&nbsp;<br><br></span>");
     }
 }
