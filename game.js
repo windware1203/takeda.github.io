@@ -102,9 +102,9 @@ function submit()
 function rePoint()
 {
     document.getElementById("score").innerHTML = pionts;
-    rank = Math.floor(pionts/10);
+    /*rank = Math.floor(pionts/10);
     console.log(rank);
     document.getElementById("rank").innerHTML = rank;
 
-    document.getElementById("rankImg").src = rankImg[rank];
+    document.getElementById("rankImg").src = rankImg[rank];*/
 }
