@@ -147,7 +147,7 @@
             </div> 
     </div>
     <div class="container">
-           <div class="box">    
+           <div class="box" style="width: max-content;">    
             <h1 id="RSA">RSA <sub><a target="_blank" href="https://ithelp.ithome.com.tw/articles/10250721">[3]</a></sub></h1>
                 <p style="width: 70%; align-content: : center; margin-bottom: 3%;margin-top: 3%;">
                     
@@ -169,7 +169,29 @@
                     
                 </p>
             </div> 
-    </div>
+        </div>
+        <div class="container">
+            <div class="box" style="width: 100%;"> 
+                    <p>
+                        &#8681;&nbsp;如下開始模擬RSA金鑰的產生過程&nbsp; &#8681;<br><br>
+                        <span id="rsa_process"></span>
+                        <p style="background-color: #999999;width: 50%;margin-left: 25%;">
+                            <span style="color: white;margin-top: 3%; font-size: 120%;font-weight: 700;">Simulation</span><br>
+                            <span style="color: white;">Enter your a <i>prime</i> number P:</span>
+                            <input type="number" style="width: 20%;" id="rsaNum_p"><br>
+                            <span style="color: white;">Enter your a <i>prime</i> number Q:</span>
+                            <input type="number" style="width: 20%;" id="rsaNum_q"><br>
+                            <span style="color: white;">Plain Text:</span>
+                            <input type="text" style="color: red;" id="rot13_output" disabled="disabled"><br><br>
+                            <span style="color: white;">Cipher Text:</span>
+                            <input type="text" style="color: red;" id="rot13_output" disabled="disabled"><br><br>
+                            <button style="margin-left: 36%;font-size: 120%;" class="button" onclick="rsa();">submit</button>
+                        </p>
+                                
+                    </p>
+            </div>
+        </div>
+            
     
     
 

@@ -37,3 +37,24 @@ function quick(a,b,c)
 	}
 	return ans;
 }
+function isPrime(num) 
+{
+    for(var i = 2; i < num; i++)
+      if(num % i === 0) return false;
+    return num > 1;
+  }
+function rsa()
+{
+    let p = document.getElementById("rsaNum_p").value;
+    let q = document.getElementById("rsaNum_q").value;
+    if(!isPrime(p) || !isPrime(q))alert("Enter prime number please");
+    else
+    {
+        let n = p * q;
+        let r = (p - 1) * (q - 1);
+        let e = getRandomInt(r - 1) + 1;
+        let d = 1;
+        while((d * e) % r != 1)
+            d++;
+    }
+}
