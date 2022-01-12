@@ -66,31 +66,37 @@
     
 
     <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Plain text and Cipher text</h1>
-    <div class="container" style="width: 100%;margin-top: 5%;margin-bottom: 5%;">
-           <div class="box">
-              <h1>明文 Plain text </h1>
-                 <p style="align-content: center; margin-bottom: 3%;margin-top: 3%;">
-                    <div class="box">
-                      <p>
-                          不論在軟體抑或網頁開發，多少都會碰到機密資料的處理。此時，未受加密的原始資料稱為明文<span style="font-style: oblique">(Plain Text)。</span><br>
+
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">明文<br>Plain text</h1><br>
+            <p style="text-align: left;">
+                <br>
+                不論在軟體抑或網頁開發，多少都會碰到機密資料的處理。此時，未受加密的原始資料稱為明文<span style="font-style: oblique">(Plain Text)。</span><br>
                           資料處理的過程若不加密，而直接傳送處理的話是十分危險的，容易遭攻擊者取得機密資料，進而竄改或進行其他攻擊。
-                      </p>
-                   </div>
-                 </p>
-           </div>
-           
+            </p>
+        </div>
     </div>
-    <div class="container" style="width: 100%; margin-top: 5%;margin-bottom: 5%;">   
-           <div class="box">
-               <h1>密文 Cipher text </h1>
-                  <p>
-                      傳遞過程經過加密程序的文本稱為密文(Cipher Text)。<br>
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">密文<br>Cipher text</h1><br>
+            <p style="text-align: left;">
+                <br>
+                傳遞過程經過加密程序的文本稱為密文(Cipher Text)。<br>
                       經過加密算法產生金鑰(Key)，又分為對稱(A Public Key)與非對稱金鑰(A Public Key & A Private Key)之差別。<br>
                       下面為簡易加密模擬，使用&oplus;(xor)的可逆特性。<br>
-                  </p>
-                  <p style="align-content: center; margin-bottom: 3%;margin-top: 3%;">
+            </p>
+        </div>
+    </div>
+<div class="container">
+           <div class="box">    
+            
+                <p style="align-content: center; margin-bottom: 3%;margin-top: 3%;">
                     <div class="box">
                        <p>
+                            
+                            <br>
+                            
                             <p style="background-color: #999999;width: 50%;margin-left: 25%;">
                                 <span style="color: white;margin-top: 3%; font-size: 150%;font-weight: 700;">Simulation</span><br>
                                 <span style="color: white;">Plain text:</span>
@@ -110,24 +116,38 @@
                        </p>
                        
                     </div>
+                     <img class="img-rot13" src="img/rot13.png" alt="" width="40%">
                      
                 </p>
-           </div>
-    </div>
-    
+            </div> 
+    </div>                  
+
+                            
+                                
+
+
     <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Cryptography</h1>
     <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class="title-a">ROT13</h1><br>
+            <p style="text-align: left;">
+                <br>
+                           &emsp;&emsp;ROT13 是一種位移值為13的簡單型替換式密碼演算法。由於其加密方式十分簡單易懂，適合密碼學初學者學習概念使用；
+                           並不常使用於實務，而目前常使用的算法為<a class="word" href="#RSA">RSA</a>
+                           及基於ECC<a target="_blank" href="https://ithelp.ithome.com.tw/articles/10251031"><sub>[1]</sub></a>
+                           的ECDSA<a target="_blank" href="https://medium.com/cryptocow/%E6%A9%A2%E5%9C%93%E6%9B%B2%E7%B7%9A%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95-ecdsa-%E8%88%87-rfc6979-%E6%94%B9%E9%80%B2%E6%8F%90%E6%A1%88-dabeea17a8e3"><sub>[2]</sub></a>常用於數位簽章，其都含有數學難題的性質來保全其安全性。<br><br>
+                           &emsp;&emsp;此外，ROT13只對字母進行變換，其他字元不受加密。因此，衍伸出變形<a class="word" href="https://www.dcode.fr/rot-47-cipher" target="_blank">ROT47</a>，使用ASCII code 來進行變化。<br><br>
+                           &emsp;&emsp;ROT13(rotate by 13 places) is a algorithm of substitution cipher. The shift value is 13.<br>
+            </p>
+        </div>
+    </div>
+    <div class="container">
            <div class="box">    
-            <h1>ROT13</h1>
+            
                 <p style="align-content: center; margin-bottom: 3%;margin-top: 3%;">
                     <div class="box">
                        <p>
-                            ROT13 是一種位移值為13的簡單型替換式密碼演算法。由於其加密方式十分簡單易懂，適合密碼學初學者學習概念使用；<br>
-                           並不常使用於實務，而目前常使用的算法為<a class="word" href="#RSA">RSA</a>
-                           及基於ECC<a target="_blank" href="https://ithelp.ithome.com.tw/articles/10251031"><sub>[1]</sub></a>
-                           的ECDSA<a target="_blank" href="https://medium.com/cryptocow/%E6%A9%A2%E5%9C%93%E6%9B%B2%E7%B7%9A%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95-ecdsa-%E8%88%87-rfc6979-%E6%94%B9%E9%80%B2%E6%8F%90%E6%A1%88-dabeea17a8e3"><sub>[2]</sub></a>常用於數位簽章，其都含有數學難題的性質來保全其安全性。<br>
-                           此外，ROT13只對字母進行變換，其他字元不受加密。因此，衍伸出變形<a class="word" href="https://www.dcode.fr/rot-47-cipher" target="_blank">ROT47</a>，使用ASCII code 來進行變化。<br>
-                            ROT13(rotate by 13 places) is a algorithm of substitution cipher. The shift value is 13.<br>
+                            
                             <img src="img/function.png" alt="" style="margin-top: 2%;"><br>
                             
                             <p style="background-color: #999999;width: 50%;margin-left: 25%;">
@@ -149,9 +169,20 @@
     </div>
     <div class="container">
            <div class="box" style="width: max-content;">    
-            <h1 id="RSA">RSA <sub><a target="_blank" href="https://ithelp.ithome.com.tw/articles/10250721">[3]</a></sub></h1>
+            <h1 class="title-a" id="RSA">RSA</h1>
+               
                 <p style="width: 70%; align-content: center; margin-bottom: 3%;margin-top: 3%;">
+                       
                     
+                </p>
+            </div> 
+        </div>
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">RSA</h1><br>
+            <p style="text-align: left;">
+                <br>
+                Ref: <a target="_blank" href="https://ithelp.ithome.com.tw/articles/10250721">[3]</a>
                        <ol style="list-style: upper-roman;font-size: 120%;">
                            <li><p id="rsa1">選出兩個較大的質數 p 和 q</p></li><br>
                            <li><p id="rsa2">計算兩個質數的乘積 n = p × q</p></li><br>
@@ -167,10 +198,9 @@
                            </li><br>
                            <li><p>可得</p><img src="img/r3.png" alt=""></li><br>
                        </ol>
-                    
-                </p>
-            </div> 
+            </p>
         </div>
+    </div>
         <div class="container">
             <div class="box" style="width: 100%;"> 
                     <p>
@@ -197,7 +227,7 @@
                     </p>
             </div>
         </div>
-    <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Programming Safe</h1>
+    <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">This is password.</h1>
     <div class="container">
         <div class="box">
             <p>
@@ -205,7 +235,28 @@
                 <p>別把任何機密資用明文方式傳送，就算是source code亦同。</p> <br>
             </p>
         </div>
-    </div>        
+    </div>
+    
+    <h1 class="title_learn"><img src="bookmark.png" style="margin-right: 2%;">Buffer Overflow</h1>
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">正常情況</h1><br><img src="img/buffer1.png" alt="">
+            <p style="text-align: left;">
+                <br>
+                &emsp;&emsp;在一般使用 C 或 C++ 等語言編成的程式在使用到固定大小的緩衝區進行資料存取時並不會自己進行緩衝區邊界的檢查，在一般正常使用情況，輸入值（Input data）會小於緩衝區的大小（Buffer size）。 <br><br>
+                &emsp;&emsp;若程式設計者在設計讀取輸入值至緩衝區時也忽略了檢查輸入值長度時，攻擊者就可以透過輸入一筆較長的資料，以造成程式癱瘓或改變執行流程，通常會搭配 Shellcode 可以執行任意程式碼，而且同時擁有受害程式的權限。
+            </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">特殊情況</h1>
+            <p>
+               <img src="img/buffer1.png" alt=""> <br>
+                在一般使用 C 或 C++ 等語言編成的程式在使用到固定大小的緩衝區進行資料存取時並不會自己進行緩衝區邊界的檢查，在一般正常使用情況，輸入值（Input data）會小於緩衝區的大小（Buffer size）。
+            </p>
+        </div>
+    </div>     
     
     
 
