@@ -72,8 +72,8 @@
            <h1 class = "title-a">明文<br>Plain text</h1><br>
             <p style="text-align: left;">
                 <br>
-                不論在軟體抑或網頁開發，多少都會碰到機密資料的處理。此時，未受加密的原始資料稱為明文<span style="font-style: oblique">(Plain Text)。</span><br>
-                          資料處理的過程若不加密，而直接傳送處理的話是十分危險的，容易遭攻擊者取得機密資料，進而竄改或進行其他攻擊。
+                &emsp;&emsp;不論在軟體抑或網頁開發，多少都會碰到機密資料的處理。此時，未受加密的原始資料稱為明文<span style="font-style: oblique">(Plain Text)。</span><br><br>
+                &emsp;&emsp;資料處理的過程若不加密，而直接傳送處理的話是十分危險的，容易遭攻擊者取得機密資料，進而竄改或進行其他攻擊。
             </p>
         </div>
     </div>
@@ -82,9 +82,9 @@
            <h1 class = "title-a">密文<br>Cipher text</h1><br>
             <p style="text-align: left;">
                 <br>
-                傳遞過程經過加密程序的文本稱為密文(Cipher Text)。<br>
-                      經過加密算法產生金鑰(Key)，又分為對稱(A Public Key)與非對稱金鑰(A Public Key & A Private Key)之差別。<br>
-                      下面為簡易加密模擬，使用&oplus;(xor)的可逆特性。<br>
+                &emsp;&emsp;傳遞過程經過加密程序的文本稱為密文(Cipher Text)。<br><br>
+                &emsp;&emsp;經過加密算法產生金鑰(Key)，又分為對稱(A Public Key)與非對稱金鑰(A Public Key & A Private Key)之差別。<br><br>
+                &emsp;&emsp;下面為簡易加密模擬，使用&oplus;(xor)的可逆特性：
             </p>
         </div>
     </div>
@@ -172,17 +172,7 @@
             <h1 class="title-a" id="RSA">RSA</h1>
                
                 <p style="width: 70%; align-content: center; margin-bottom: 3%;margin-top: 3%;">
-                       
-                    
-                </p>
-            </div> 
-        </div>
-    <div class="container">
-        <div class="box" style="width: 55%;">
-           <h1 class = "title-a">RSA</h1><br>
-            <p style="text-align: left;">
-                <br>
-                Ref: <a target="_blank" href="https://ithelp.ithome.com.tw/articles/10250721">[3]</a>
+                       Ref: <a target="_blank" href="https://ithelp.ithome.com.tw/articles/10250721">[3]</a>
                        <ol style="list-style: upper-roman;font-size: 120%;">
                            <li><p id="rsa1">選出兩個較大的質數 p 和 q</p></li><br>
                            <li><p id="rsa2">計算兩個質數的乘積 n = p × q</p></li><br>
@@ -198,9 +188,11 @@
                            </li><br>
                            <li><p>可得</p><img src="img/r3.png" alt=""></li><br>
                        </ol>
-            </p>
+                    
+                </p>
+            </div> 
         </div>
-    </div>
+    
         <div class="container">
             <div class="box" style="width: 100%;"> 
                     <p>
@@ -231,7 +223,7 @@
     <div class="container">
         <div class="box">
             <p>
-                <img  style="width: 65%;" src="img/code.PNG" alt=""><br>
+                <img  style="width: 65%;" src="img/code.PNG" alt=""><br><br><br>
                 <p>別把任何機密資用明文方式傳送，就算是source code亦同。</p> <br>
             </p>
         </div>
@@ -248,12 +240,16 @@
             </p>
         </div>
     </div>
+    <br><br><br><br>
     <div class="container">
         <div class="box" style="width: 55%;">
-           <h1 class = "title-a">特殊情況</h1>
-            <p>
-               <img src="img/buffer1.png" alt=""> <br>
-                在一般使用 C 或 C++ 等語言編成的程式在使用到固定大小的緩衝區進行資料存取時並不會自己進行緩衝區邊界的檢查，在一般正常使用情況，輸入值（Input data）會小於緩衝區的大小（Buffer size）。
+           <h1 class = "title-a">特殊情況</h1><br>
+           <img src="img/buffer2.png" alt=""> <br>
+           . <br>. <br>. <br>. <br>. <br>. <br>. <br>v<br>v
+           <img src="img/buffer3.png" alt=""> <br>
+            <p style="text-align: left;">
+               
+                &emsp;&emsp;如上圖所示，當輸入值過長且又沒去檢查是否超過緩衝區長度時，則會使得輸入值覆寫掉一些存在 stack 中的訊息，如圖中的 Return address，當這個存放程式 Call back 位址的 Return address 被修改後，將可能因為寫入的值而導致系統癱瘓或被導向攻擊者寫入 Shellcode 的位址
             </p>
         </div>
     </div>     
