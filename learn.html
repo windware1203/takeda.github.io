@@ -68,10 +68,12 @@
         
         <nav>
             <ul>
-                <li><a href="#P1">Plain text and Cipher text</a></li><br><br>
-                <li><a href="#P2">Cryptography</a></li><br><br>
-                <li><a href="#P3">This is password.</a></li><br><br>
-                <li><a href="#P4">Buffer Overflow</a></li><br><br>
+                <li><a href="learn_1.html">Plain text and Cipher text</a></li><br><br>
+                <li><a href="learn_2.html">Cryptography</a></li><br><br>
+                <li><a href="learn_3.html">This is password.</a></li><br><br>
+                <li><a href="learn_4.html">Buffer Overflow</a></li><br><br>
+                <li><a href="learn_5.html">XSS</a></li><br><br>
+                <li><a href="learn_6.html">???</a></li><br><br>
             </ul>
         </nav>
     </div>
@@ -128,208 +130,13 @@
                        </p>
                        
                     </div>
-                     <img class="img-rot13" src="img/rot13.png" alt="" width="40%">
+                     <img class="img-rot13" src="img/xor.png" alt="" width="40%" >
                      
                 </p>
             </div> 
     </div>                  
 
-                            
-                                
-
-
-    <h1 id="P2" class="title-f">Cryptography</h1>
-    &emsp;<a href="#top"><img src="img/caret-quare-up.png" alt=""></a>
-    <div class="container">
-        <div class="box" style="width: 55%;">
-           <h1 class="title-a">ROT13</h1><br>
-            <p style="text-align: left;">
-                <br>
-                           &emsp;&emsp;ROT13 是一種位移值為13的簡單型替換式密碼演算法。由於其加密方式十分簡單易懂，適合密碼學初學者學習概念使用；
-                           並不常使用於實務，而目前常使用的算法為<a class="word" href="#RSA">RSA</a>
-                           及基於ECC<a target="_blank" href="https://ithelp.ithome.com.tw/articles/10251031"><sub>[1]</sub></a>
-                           的ECDSA<a target="_blank" href="https://medium.com/cryptocow/%E6%A9%A2%E5%9C%93%E6%9B%B2%E7%B7%9A%E5%8A%A0%E5%AF%86%E6%BC%94%E7%AE%97%E6%B3%95-ecdsa-%E8%88%87-rfc6979-%E6%94%B9%E9%80%B2%E6%8F%90%E6%A1%88-dabeea17a8e3"><sub>[2]</sub></a>常用於數位簽章，其都含有數學難題的性質來保全其安全性。<br><br>
-                           &emsp;&emsp;此外，ROT13只對字母進行變換，其他字元不受加密。因此，衍伸出變形<a class="word" href="https://www.dcode.fr/rot-47-cipher" target="_blank">ROT47</a>，使用ASCII code 來進行變化。<br><br>
-                           &emsp;&emsp;ROT13(rotate by 13 places) is a algorithm of substitution cipher. The shift value is 13.<br>
-            </p>
-        </div>
-    </div>
-    <div class="container">
-           <div class="box">    
-            
-                <p style="align-content: center; margin-bottom: 3%;margin-top: 3%;">
-                    <div class="box">
-                       <p>
-                            
-                            <img src="img/function.png" alt="" style="margin-top: 2%;"><br>
-                            
-                            <p style="background-color: #999999;width: 50%;margin-left: 25%;">
-                                <span style="color: white;margin-top: 3%; font-size: 150%;font-weight: 700;">Simulation</span><br>
-                                <span style="color: white;">Enter your string:</span>
-                                <input type="text" id="rot13_input"><br>
-                                <span style="color: white;">Result:          :</span>
-                                <input type="text" style="color: red;" id="rot13_output" disabled="disabled"><br><br>
-                                <button style="margin-left: 36%;font-size: 120%;" class="button" onclick="rot13();">submit</button>
-                            </p>
-                            
-                       </p>
-                       
-                    </div>
-                     <img class="img-rot13" src="img/rot13.png" alt="" width="40%">
-                     
-                </p>
-            </div> 
-    </div>
-    <div class="container">
-           <div class="box" style="width: max-content;">    
-            <h1 class="title-a" id="RSA">RSA</h1>
-               
-                <p style="width: 70%; align-content: center; margin-bottom: 3%;margin-top: 3%;">
-                       Ref: <a target="_blank" href="https://ithelp.ithome.com.tw/articles/10250721">[3]</a>
-                       <ol style="list-style: upper-roman;font-size: 120%;">
-                           <li><p id="rsa1">選出兩個較大的質數 p 和 q</p></li><br>
-                           <li><p id="rsa2">計算兩個質數的乘積 n = p × q</p></li><br>
-                           <li><p id="rsa3">計算出小於 n 且與 n 互質的整數個數<br>&phi; (n)= (p - 1)(q - 1)</p></li><br>
-                           <li>
-                               <p id="rsa4">選出一個整數 e<br>（拿來當做公鑰)</p>              
-                                   <img src="img/r1.png" alt="">
-                               
-                           </li><br>
-                           
-                           <li><p id="rsa5">計算 d (私鑰)</p>
-                           <img src="img/r2.png" alt="">
-                           </li><br>
-                           <li><p>可得</p><img src="img/r3.png" alt=""></li><br>
-                       </ol>
-                    
-                </p>
-            </div> 
-        </div>
-    
-        <div class="container">
-            <div class="box" style="width: 100%;"> 
-                    <p>
-                        
-                        
-                        <p style="background-color: #999999;width: 50%;margin-left: 25%;">
-                            <span style="color: white;margin-top: 3%; font-size: 150%;font-weight: 700;">Simulation</span><br>
-                            <span style="color: white;">Enter your a>0 &nbsp;<i>prime</i> number P:</span>
-                            <input type="number" placeholder="prime" style="width: 20%;" id="rsaNum_p"><br>
-
-                            <span style="color: white;">Enter your a>0 &nbsp; <i>prime</i> number Q:</span>
-                            <input type="number" placeholder="prime" style="width: 20%;" id="rsaNum_q"><br>
-
-                            &#8681;&nbsp;如下開始模擬RSA金鑰的產生過程&nbsp; &#8681;<br><br>
-                            <span id="rsa_process"></span>
-
-                            <span style="color: white;">Plain Text:</span>
-                            <input type="number"  style="color: red;" id="rsa_input" ><br><br>
-                            <span style="color: white;">Cipher Text:</span>
-                            <input type="text" style="color: red;" id="rsa_output" disabled="disabled"><br><br>
-                            <button style="margin-left: 36%;font-size: 120%;" class="button" onclick="rsa();">submit</button>
-                        </p>
-                                
-                    </p>
-            </div>
-        </div>
-    <h1 id="P3" class="title-f">This is password.</h1>
-    &emsp;<a href="#top"><img src="img/caret-quare-up.png" alt=""></a>
-    <div class="container">
-        <div class="box">
-            <p>
-                <img  style="width: 65%;" src="img/code.PNG" alt=""><br><br><br>
-                <p>別把任何機密資用明文方式傳送，就算是source code亦同。</p> <br>
-            </p>
-        </div>
-    </div>
-    
-    <h1 id="P4" class="title-f">Buffer Overflow</h1>
-    &emsp;<a href="#top"><img src="img/caret-quare-up.png" alt=""></a>
-    <div class="container">
-        <div class="box" style="width: 55%;">
-           <h1 class = "title-a">正常情況</h1><br><img src="img/buffer1.png" alt="">
-            <p style="text-align: left;">
-                <br>
-                &emsp;&emsp;在一般使用 C 或 C++ 等語言編成的程式在使用到固定大小的緩衝區進行資料存取時並不會自己進行緩衝區邊界的檢查，在一般正常使用情況，輸入值（Input data）會小於緩衝區的大小（Buffer size）。 <br><br>
-                &emsp;&emsp;若程式設計者在設計讀取輸入值至緩衝區時也忽略了檢查輸入值長度時，攻擊者就可以透過輸入一筆較長的資料，以造成程式癱瘓或改變執行流程，通常會搭配 Shellcode 可以執行任意程式碼，而且同時擁有受害程式的權限。
-            </p>
-        </div>
-    </div>
-    <br><br><br><br>
-    <div class="container">
-        <div class="box" style="width: 55%;">
-           <h1 class = "title-a">特殊情況</h1><br>
-           <img src="img/buffer2.png" alt=""> <br>
-           <br><br><br>
-           <img  src="img/chevron-double-down.png" alt=""><br>
-           <img  src="img/chevron-double-down.png" alt=""><br>
-           <img  src="img/chevron-double-down.png" alt=""><br>
-           <br><br><br>
-           <img src="img/buffer3.png" alt=""> <br><br><br>
-            <p style="text-align: left;">
-               
-                &emsp;&emsp;如上圖所示，當輸入值過長且又沒去檢查是否超過緩衝區長度時，則會使得輸入值覆寫掉一些存在 stack 中的訊息，如圖中的 Return address，當這個存放程式 Call back 位址的 Return address 被修改後，將可能因為寫入的值而導致系統癱瘓或被導向攻擊者寫入 Shellcode 的位址
-            </p>
-        </div>
-    </div>     
-    
-    <br><br><br><br>
-    <div class="container">
-        <div class="box" style="width: 55%;">
-           <h1 class = "title-a">Buffer Overflow</h1><br>
-           <br><br><br>
-           <img src="img/buffer4.png" alt="">
-           <br><br><br>
- 
-            <p style="text-align: left;">
-               
-                &emsp;&emsp;如上圖所示，當輸入值過長且又沒去檢查是否超過緩衝區長度時，
-				則會使得輸入值覆寫掉一些存在 stack 中的訊息，如圖中的 Return address，
-				當這個存放程式 Call back 位址的 Return address 被修改後，
-				將可能因為寫入的值而導致系統癱瘓或被導向攻擊者寫入 Shellcode 的位址
-               <h4><a class="button" href="r1.html" style="width:5%;height:1%;cursor:pointer;">按我Overflow</a></h4>
-			</p>
-			 
-        </div>
-    </div>
-
-    
-
-
-   
-    <div class="container">
-        <div class="box" style="width: 55%;">
-           <h1 class = "title-a">Example</h1><br>
-           <br><br><br>
- 
-            <p style="text-align: left;">
-               
-                &emsp;&emsp;
-                最簡單的例子就是函式 strcpy（est ，src），因其不檢查輸入長度，所以很容易造成緩衝區溢位，
-                不過現在程式設計師都會以 strncpy 取而代之。<br><br>
-                &emsp;&emsp;
-                假設此時宣告 char buffer［24］，再呼叫 strcpy（Buffer，Input），當 Input 大於 24 就有機會覆寫到
-                原 Stack 中所存放的值，包含暫存器 EIP、EBP 等，就會影響到 Return address 而改變程式執行流程。<br><br>
-                &emsp;&emsp;
-                我們可以透過 Ollydbg 等 Debugger 觀察程式的執行流程、暫存器值和 Stack 內容，如下圖可以看到在經過 
-                strcpy 輸入一長串 Input data 後，將造成不可預期的影響。
-
-            </p>
-            <img src="img/stack.png" alt="">
-            <br><br><br><br>
-            <p style="text-align: left;">
-                &emsp;&emsp;
-                而 Shellcode 就是一堆十六進位的代碼組合而成，可以直接被 CPU 辨識執行，
-                通常會透過 Buffer Overflow 改變程式執行流程到攻擊者存放在記憶體的 Shellcode，
-                就可以為所欲為了，像是透過下面的程式碼以 xor 計算去改變 EBP 的值。
-            </p>
-            <br><br>
-            <img src="img/shellcode.PNG" alt="">
-        </div>
-    </div><br><br><br><br>
-
-    <h1 id="P5" class="title-f">XSS(Cross-Site Scripting)</h1>
-    <a target="_blank" href="xss.html">xss</a>
+      
     
 	
     <br><br><br>

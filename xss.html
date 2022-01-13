@@ -20,11 +20,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet"> 
 	</head>
+    <style>
+        *{
+            font-size: 120%;
+        }
+    </style>
 	<meta charset="utf-8">
 	<title></title>
 	<body>
+        <h1 class="title-a">Attack example:</h1>
+        <h1><code>&lt;img src=x onerror=alert(1)&gt;</code></h1>
+        <h1><code>&lt;script&gt;alert("I'm so BAD");&lt;/script &gt;</h1>
 		<form method="post">
-			<h1><input type="text" name="input"/></h1>
+			<h1>Plz input: &nbsp;<input type="text" name="input"/></h1>
 			<h1><input type="submit" onclick="onSubmit(input.value)" value="submit"/></h1>
 		</form>
 	</body>

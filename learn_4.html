@@ -1,0 +1,180 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">	
+   <script src="learn.js" async></script>
+   
+    <link rel="stylesheet" href="indexStyle.css">
+    
+	<link rel="Shortcut Icon" type="image/x-icon" href="img/home.ico" />
+	
+	
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet"> 
+    <title>InfoSec Learning</title>
+	<style>
+		footer{
+            display: block;
+            clear:both;
+            bottom: 0;
+            padding:5px;
+            text-align:center;
+            font-family: 'Noto Serif TC', serif;
+        }
+		p{
+            font-family: 'Noto Serif TC', serif;
+            font-size: 130%;
+        }
+		body{
+			margin-right:2em;
+			margin-left:2em;
+		}
+		
+	</style>
+    
+</head>
+    
+<body style="background-color: #BCB8B1;" >
+	
+	<br><br>
+	
+    <header>
+    <div class="navbar">
+        <a href="index.html"><img src="img/logo.png" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">InfoSec Game</a></li>
+                <li><a href="learn.html">Learning</a></li>
+                <li><a href="html/about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    </header>
+    <h1 class="title">Information Security Knowledge</h1>
+    <div id="top" class="navbar">
+        
+        <nav>
+            <ul>
+                <li><a href="learn.html">Plain text and Cipher text</a></li><br><br>
+                <li><a href="learn_2.html">Cryptography</a></li><br><br>
+                <li><a href="learn_3.html">This is password.</a></li><br><br>
+                <li><a href="learn_4.html">Buffer Overflow</a></li><br><br>
+                <li><a href="learn_5.html">XSS</a></li><br><br>
+                <li><a href="learn_6.html">???</a></li><br><br>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <h1 id="P4" class="title-f">Buffer Overflow</h1>
+    &emsp;<a href="#top"><img src="img/caret-quare-up.png" alt=""></a>
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">正常情況</h1><br><img src="img/buffer1.png" alt="">
+            <p style="text-align: left;">
+                <br>
+                &emsp;&emsp;在一般使用 C 或 C++ 等語言編成的程式在使用到固定大小的緩衝區進行資料存取時並不會自己進行緩衝區邊界的檢查，在一般正常使用情況，輸入值（Input data）會小於緩衝區的大小（Buffer size）。 <br><br>
+                &emsp;&emsp;若程式設計者在設計讀取輸入值至緩衝區時也忽略了檢查輸入值長度時，攻擊者就可以透過輸入一筆較長的資料，以造成程式癱瘓或改變執行流程，通常會搭配 Shellcode 可以執行任意程式碼，而且同時擁有受害程式的權限。
+            </p>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">特殊情況</h1><br>
+           <img src="img/buffer2.png" alt=""> <br>
+           <br><br><br>
+           <img  src="img/chevron-double-down.png" alt=""><br>
+           <img  src="img/chevron-double-down.png" alt=""><br>
+           <img  src="img/chevron-double-down.png" alt=""><br>
+           <br><br><br>
+           <img src="img/buffer3.png" alt=""> <br><br><br>
+            <p style="text-align: left;">
+               
+                &emsp;&emsp;如上圖所示，當輸入值過長且又沒去檢查是否超過緩衝區長度時，則會使得輸入值覆寫掉一些存在 stack 中的訊息，如圖中的 Return address，當這個存放程式 Call back 位址的 Return address 被修改後，將可能因為寫入的值而導致系統癱瘓或被導向攻擊者寫入 Shellcode 的位址
+            </p>
+        </div>
+    </div>     
+    
+    <br><br><br><br>
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">Buffer Overflow</h1><br>
+           <br><br><br>
+           <img src="img/buffer4.png" alt="">
+           <br><br><br>
+ 
+            <p style="text-align: left;">
+               
+                &emsp;&emsp;如上圖所示，當輸入值過長且又沒去檢查是否超過緩衝區長度時，
+				則會使得輸入值覆寫掉一些存在 stack 中的訊息，如圖中的 Return address，
+				當這個存放程式 Call back 位址的 Return address 被修改後，
+				將可能因為寫入的值而導致系統癱瘓或被導向攻擊者寫入 Shellcode 的位址
+               <h4><a class="button" href="r1.html" style="width:5%;height:1%;cursor:pointer;">按我Overflow</a></h4>
+			</p>
+			 
+        </div>
+    </div>
+
+    
+
+
+   
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">Example</h1><br>
+           <br><br><br>
+ 
+            <p style="text-align: left;">
+               
+                &emsp;&emsp;
+                最簡單的例子就是函式 strcpy（est ，src），因其不檢查輸入長度，所以很容易造成緩衝區溢位，
+                不過現在程式設計師都會以 strncpy 取而代之。<br><br>
+                &emsp;&emsp;
+                假設此時宣告 char buffer［24］，再呼叫 strcpy（Buffer，Input），當 Input 大於 24 就有機會覆寫到
+                原 Stack 中所存放的值，包含暫存器 EIP、EBP 等，就會影響到 Return address 而改變程式執行流程。<br><br>
+                &emsp;&emsp;
+                我們可以透過 Ollydbg 等 Debugger 觀察程式的執行流程、暫存器值和 Stack 內容，如下圖可以看到在經過 
+                strcpy 輸入一長串 Input data 後，將造成不可預期的影響。
+
+            </p>
+            <img src="img/stack.png" alt="">
+            <br><br><br><br>
+            <p style="text-align: left;">
+                &emsp;&emsp;
+                而 Shellcode 就是一堆十六進位的代碼組合而成，可以直接被 CPU 辨識執行，
+                通常會透過 Buffer Overflow 改變程式執行流程到攻擊者存放在記憶體的 Shellcode，
+                就可以為所欲為了，像是透過下面的程式碼以 xor 計算去改變 EBP 的值。
+            </p>
+            <br><br>
+            <img src="img/shellcode.PNG" alt="">
+        </div>
+    </div><br><br><br><br>
+
+    
+	
+    <br><br><br>
+	<footer>
+		<p><small>
+            <font size="5" face="serif">Takeda&nbspNana&nbsp&copyCopyright  2021</font>
+		</small></p>
+		<font size="10">
+		<span style="font-family: 'Mr De Haviland', cursive;">Takeda NaNa</span>
+        </font>
+	</footer>
+    
+</body>
+</html>

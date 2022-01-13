@@ -1,0 +1,109 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">	
+   <script src="learn.js" async></script>
+   
+    <link rel="stylesheet" href="indexStyle.css">
+    
+	<link rel="Shortcut Icon" type="image/x-icon" href="img/home.ico" />
+	
+	
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600&display=swap" rel="stylesheet">
+	
+	<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mr+De+Haviland&display=swap" rel="stylesheet"> 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rosario:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet"> 
+    <title>InfoSec Learning</title>
+	<style>
+		footer{
+            display: block;
+            clear:both;
+            bottom: 0;
+            padding:5px;
+            text-align:center;
+            font-family: 'Noto Serif TC', serif;
+        }
+		p{
+            font-family: 'Noto Serif TC', serif;
+            font-size: 130%;
+        }
+		body{
+			margin-right:2em;
+			margin-left:2em;
+		}
+		
+	</style>
+    
+</head>
+    
+<body style="background-color: #BCB8B1;" >
+	
+	<br><br>
+	
+    <header>
+    <div class="navbar">
+        <a href="index.html"><img src="img/logo.png" class="logo"></a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="game.html">InfoSec Game</a></li>
+                <li><a href="learn.html">Learning</a></li>
+                <li><a href="html/about.html">About</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    </header>
+    <h1 class="title">Information Security Knowledge</h1>
+    <div id="top" class="navbar">
+        
+        <nav>
+            <ul>
+                <li><a href="learn.html">Plain text and Cipher text</a></li><br><br>
+                <li><a href="learn_2.html">Cryptography</a></li><br><br>
+                <li><a href="learn_3.html">This is password.</a></li><br><br>
+                <li><a href="learn_4.html">Buffer Overflow</a></li><br><br>
+                <li><a href="learn_5.html">XSS</a></li><br><br>
+                <li><a href="learn_6.html">???</a></li><br><br>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <h1 id="P5" class="title-f">XSS(Cross-Site Scripting)</h1>
+    <a target="_blank" href="xss.html">xss</a>
+    
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">正常情況</h1><br>
+            <p style="text-align: left;">
+                <br>
+                &emsp;&emsp;在一般使用 C 或 C++ 等語言編成的程式在使用到固定大小的緩衝區進行資料存取時並不會自己進行緩衝區邊界的檢查，在一般正常使用情況，輸入值（Input data）會小於緩衝區的大小（Buffer size）。 <br><br>
+                &emsp;&emsp;若程式設計者在設計讀取輸入值至緩衝區時也忽略了檢查輸入值長度時，攻擊者就可以透過輸入一筆較長的資料，以造成程式癱瘓或改變執行流程，通常會搭配 Shellcode 可以執行任意程式碼，而且同時擁有受害程式的權限。
+            </p>
+        </div>
+    </div>
+    
+    
+	
+    <br><br><br>
+	<footer>
+		<p><small>
+            <font size="5" face="serif">Takeda&nbspNana&nbsp&copyCopyright  2021</font>
+		</small></p>
+		<font size="10">
+		<span style="font-family: 'Mr De Haviland', cursive;">Takeda NaNa</span>
+        </font>
+	</footer>
+    
+</body>
+</html>
