@@ -40,12 +40,63 @@
 			margin-right:2em;
 			margin-left:2em;
 		}
-		
+        
+		.slidein {
+  -moz-animation-duration: 3s;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+  -moz-animation-name: slidein;
+  -webkit-animation-name: slidein;
+  animation-name: slidein;
+  -moz-animation-iteration-count: 3;
+  -webkit-animation-iteration-count: 3;
+  animation-iteration-count: 3;
+  -moz-animation-direction: alternate;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@-moz-keyframes slidein {
+  from {
+    margin-left:100%;
+    width:300%
+  }
+
+  to {
+    margin-left:0%;
+    width:100%;
+  }
+}
+
+@-webkit-keyframes slidein {
+  from {
+    margin-left:100%;
+    width:300%
+  }
+
+  to {
+   margin-left:0%;
+   width:100%;
+ }
+}
+
+@keyframes slidein {
+  from {
+    margin-left:100%;
+    width:300%
+  }
+
+  to {
+   margin-left:0%;
+   width:100%;
+ }
+}
+    }
 	</style>
     
 </head>
     
-<body style="background-color: #BCB8B1;" >
+<body onload="setup();" style="background-color: #BCB8B1;" >
 	
 	<br><br>
 	
@@ -82,13 +133,15 @@
     <h1 id="P5" class="title-f">XSS(Cross-Site Scripting)</h1>
     <a target="_blank" href="xss.html">xss</a>
     
+    <h1 id="watchme" class = "title-b">Never trust user input</h1><br>
+
     <div class="container">
         <div class="box" style="width: 55%;">
+            
            <h1 class = "title-a">正常情況</h1><br>
             <p style="text-align: left;">
                 <br>
-                &emsp;&emsp;在一般使用 C 或 C++ 等語言編成的程式在使用到固定大小的緩衝區進行資料存取時並不會自己進行緩衝區邊界的檢查，在一般正常使用情況，輸入值（Input data）會小於緩衝區的大小（Buffer size）。 <br><br>
-                &emsp;&emsp;若程式設計者在設計讀取輸入值至緩衝區時也忽略了檢查輸入值長度時，攻擊者就可以透過輸入一筆較長的資料，以造成程式癱瘓或改變執行流程，通常會搭配 Shellcode 可以執行任意程式碼，而且同時擁有受害程式的權限。
+                
             </p>
         </div>
     </div>
