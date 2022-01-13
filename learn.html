@@ -68,10 +68,10 @@
         
         <nav>
             <ul>
-                <li><a href="#P1">1</a></li>
-                <li><a href="#P2">2</a></li>
-                <li><a href="#P3">3</a></li>
-                <li><a href="#P4">4</a></li>
+                <li><a href="#P1">Plain text and Cipher text</a></li><br><br>
+                <li><a href="#P2">Cryptography</a></li><br><br>
+                <li><a href="#P3">This is password.</a></li><br><br>
+                <li><a href="#P4">Buffer Overflow</a></li><br><br>
             </ul>
         </nav>
     </div>
@@ -283,11 +283,18 @@
  
             <p style="text-align: left;">
                
-                &emsp;&emsp;如上圖所示，當輸入值過長且又沒去檢查是否超過緩衝區長度時，則會使得輸入值覆寫掉一些存在 stack 中的訊息，如圖中的 Return address，當這個存放程式 Call back 位址的 Return address 被修改後，將可能因為寫入的值而導致系統癱瘓或被導向攻擊者寫入 Shellcode 的位址
-            </p>
+                &emsp;&emsp;如上圖所示，當輸入值過長且又沒去檢查是否超過緩衝區長度時，
+				則會使得輸入值覆寫掉一些存在 stack 中的訊息，如圖中的 Return address，
+				當這個存放程式 Call back 位址的 Return address 被修改後，
+				將可能因為寫入的值而導致系統癱瘓或被導向攻擊者寫入 Shellcode 的位址
+               <h4><a class="button" href="r1.html" style="width:5%;height:1%;cursor:pointer;">按我Overflow</a></h4>
+			</p>
+			 
         </div>
     </div>
+
     
+
 
    
 	
