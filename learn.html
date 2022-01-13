@@ -297,6 +297,40 @@
 
 
    
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">Example</h1><br>
+           <br><br><br>
+ 
+            <p style="text-align: left;">
+               
+                &emsp;&emsp;
+                最簡單的例子就是函式 strcpy（est ，src），因其不檢查輸入長度，所以很容易造成緩衝區溢位，
+                不過現在程式設計師都會以 strncpy 取而代之。<br><br>
+                &emsp;&emsp;
+                假設此時宣告 char buffer［24］，再呼叫 strcpy（Buffer，Input），當 Input 大於 24 就有機會覆寫到
+                原 Stack 中所存放的值，包含暫存器 EIP、EBP 等，就會影響到 Return address 而改變程式執行流程。<br><br>
+                &emsp;&emsp;
+                我們可以透過 Ollydbg 等 Debugger 觀察程式的執行流程、暫存器值和 Stack 內容，如下圖可以看到在經過 
+                strcpy 輸入一長串 Input data 後，將造成不可預期的影響。
+
+            </p>
+            <img src="img/stack.png" alt="">
+            <br><br><br><br>
+            <p style="text-align: left;">
+                &emsp;&emsp;
+                而 Shellcode 就是一堆十六進位的代碼組合而成，可以直接被 CPU 辨識執行，
+                通常會透過 Buffer Overflow 改變程式執行流程到攻擊者存放在記憶體的 Shellcode，
+                就可以為所欲為了，像是透過下面的程式碼以 xor 計算去改變 EBP 的值。
+            </p>
+            <br><br>
+            <img src="img/shellcode.PNG" alt="">
+        </div>
+    </div><br><br><br><br>
+
+    <h1 id="P5" class="title-f">XSS(Cross-Site Scripting)</h1>
+    <a target="_blank" href="xss.html">xss</a>
+    
 	
     <br><br><br>
 	<footer>
