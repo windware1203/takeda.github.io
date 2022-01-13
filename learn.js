@@ -33,19 +33,25 @@ function listener(e) {
 }
 function cipher()
 {
-    let the_key = getRandomInt(98)+1;
-    document.getElementById("key").innerHTML = the_key;
     let the_string = document.getElementById("cipher_input").value
-    let len = the_string.length;
-    let the_cipher = "";
-    let the_plain = "";
-    for(let i = 0 ; i<len ;i++)
+    if(the_string =="")alert("Empty input!");
+    else
     {
-        the_cipher += String.fromCharCode(the_string.charCodeAt(i) ^ the_key);
+        let the_key = getRandomInt(98)+1;
+        document.getElementById("key").innerHTML = the_key;
+
+        let len = the_string.length;
+        let the_cipher = "";
+        let the_plain = "";
+        for(let i = 0 ; i<len ;i++)
+        {
+            the_cipher += String.fromCharCode(the_string.charCodeAt(i) ^ the_key);
+        }
+        document.getElementById("plainShow").innerHTML = the_string;
+        document.getElementById("cipherShow").innerHTML = the_cipher;
+        document.getElementById("cipher_output").value = the_cipher;
     }
-    document.getElementById("plainShow").innerHTML = the_string;
-    document.getElementById("cipherShow").innerHTML = the_cipher;
-    document.getElementById("cipher_output").value = the_cipher;
+    
 }
 
 function quick(a,b,c)
