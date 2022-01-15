@@ -2,7 +2,8 @@
 <html>
 	<head>
 		<link rel="stylesheet" href="indexStyle.css">
-    
+        <script src="xss.js" async></script>
+
 	<link rel="Shortcut Icon" type="image/x-icon" href="img/home.ico" />
 	
 	
@@ -31,7 +32,7 @@
         <h1 class="title-a">Attack example:</h1>
         <h1><code>&lt;img src=x onerror=alert(1)&gt;</code></h1>
         <h1><code>&lt;script&gt;alert("I'm so BAD");&lt;/script &gt;</h1>
-		<form method="post">
+		<form method="get" action="xss.js">
 			<h1>Plz input: &nbsp;<input type="text" name="input"/></h1>
 			<h1><input type="submit" onclick="onSubmit(input.value)" value="submit"/></h1>
 		</form>
@@ -39,10 +40,3 @@
 	<!-- 我是壞人！ <script>alert("我是壞人！");</script> -->
 	
 </html>
-<script>
-	
-	function onSubmit(value) {
-		document.write(value)
-		console.log(value)
-	}
-</script>

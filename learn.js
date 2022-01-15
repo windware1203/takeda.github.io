@@ -14,7 +14,7 @@ function setup() {
   e.addEventListener("animationiteration", listener, false);
 
   var e = document.getElementById("watchme");
-  e.className = "slidein";
+
 }
 function listener(e) {
   var l = document.createElement("li");
@@ -31,6 +31,11 @@ function listener(e) {
   }
   document.getElementById("output").appendChild(l);
 }
+function setlocation(location)
+{
+    window.location = location;
+}
+
 function cipher()
 {
     let the_string = document.getElementById("cipher_input").value

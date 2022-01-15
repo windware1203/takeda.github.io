@@ -115,12 +115,12 @@ a:active, a:hover {
     background-color: white;
     color: black;
     border: 10% border #406060;
-    padding: 4% 8%;
+    padding: 1% 2%;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 100%;
-    margin-left: 40%;
+    margin-left: 0%;
 }
 iframe {
     
