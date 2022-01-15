@@ -147,8 +147,8 @@
 
             <p style="text-align: left;">
                     <ol style="text-align: left;">
-                        <li>Hacker 在受害網站注入 XSS 漏洞</li>
-                        <li>透過社交工程手法傳送惡意 URL 給 User</li>
+                        <li>Hacker 在受害網站注入 XSS 漏洞</li><br>
+                        <li>透過社交工程手法傳送惡意 URL 給 User</li><br>
                         <li>當User 點擊 URL 便會把自己的資料（cookie）藉由受害網站傳回給 Hacker</li>
                     </ol>
             </p>
@@ -158,39 +158,40 @@
     <div class="container">
         <div class="box" style="width: 55%;">
           <br><br><br>
-           <a class="title-b button"  style="font-size: 200%;" target="_blank" href="xss.html">XSS模擬</a>
+           <a class="title-b button"  style="font-size: 200%;" target="_blank" href="xss.html">點我進入XSS模擬</a>
            <br><br><br>
            <h1 class = "title-a">XSS三大種類</h1><br>
 
            <br><br><br>
 
             <p style="text-align: left;">
-                    <ol style="font-size: 200%; list-style-type: square;text-align: left;">
+                    <ol style="font-size: 200%; list-style-type: upper-roman;text-align: left;">
                         <li> 反射型 (Reflected)</li>
                         <ul style="font-size: 80%; list-style-type: katakana;">
                             <li>最常見的 XSS 攻擊類型，通常是將惡意程式會藏在網址列裡，放在 GET 參數傳遞，範例如下：<br>
                             <pre class="language-txt"><code class="language-txt">http://www.example.com/upload.asp?id=&lt;script>alert(1);&lt;/script &gt;</code></pre>
                             </li><br>
-                            <li>這種手法要能夠成功攻擊，需要使用社交工程釣魚的技巧，使 User 點擊URL 攻擊才會生效。</li>
-                            <li>因為 URL 通常看起來很詭異，所以 Hacker 通常會使用短網址或 HTML Encoder 註2的方式嘗試欺騙 User。</li>
-                        </ul>
+                            <li>這種手法要能夠成功攻擊，需要使用社交工程釣魚的技巧，使 User 點擊URL 攻擊才會生效。</li><br>
+                            <li>因為 URL 通常看起來很詭異，所以 Hacker 通常會使用短網址或 HTML Encoder 的方式嘗試欺騙 User。</li><br>
+                        </ul><br><br><br>
                         <li> DOM型</li>
                            <ul style="font-size: 80%; list-style-type: katakana;">
-                            <li>這種手法和反射型 XSS一樣，都需要使用社交工程釣魚的技巧，使 User 點擊 URL 攻擊才會生效。<br>
+                            <li>這種手法和反射型 XSS一樣，都需要使用社交工程釣魚的技巧，使 User 點擊 URL 攻擊才會生效。</li><br>
                             
-                            <li>Hacker 在 URL 輸入 DOM 註3 物件，把物件嵌入網頁程式碼，範例：</li>
+                            <li>Hacker 在 URL 輸入 DOM  物件，把物件嵌入網頁程式碼，範例：</li><br>
                             
                             <pre class="language-txt"><code class="language-txt">&lt;img src=# onerror=”alert(123)”></code></pre>
-                            </li><br>
-                            </ul>
+                            <br>
+                            </ul><br><br><br>
                         <li> 儲存型 (Stored)</li>
                              <ul style="font-size: 80%; list-style-type: katakana;">
-                            <li>與前兩種手法不同的是此種攻擊手法不需要使用社交工程釣魚的技巧，也能使 User 受到攻擊<br>
-                            
-                            <li>攻擊的方式是 Hacker 將 Javascript 儲存在伺服器的資料庫中，進而引起使 User 遭受攻擊。</li>
-                            <li>最常見的例子就是將 Javascript 注入留言板，當下一位 User 瀏覽網頁時，網頁會載入留言板的 Javascript 進而使 User 受到攻擊，範例如下：</li>
-                            <pre class="language-txt"><code class="language-txt">我是壞人！ &lt;script>alert(1);&lt;/script></code></pre>
-                            </li><br>
+                                <li>與前兩種手法不同的是此種攻擊手法不需要使用社交工程釣魚的技巧，也能使 User 受到攻擊</li><br>
+
+                                <li>攻擊的方式是 Hacker 將 Javascript 儲存在伺服器的資料庫中，進而引起使 User 遭受攻擊。</li><br>
+                                <li>最常見的例子就是將 Javascript 注入留言板，當下一位 User 瀏覽網頁時，網頁會載入留言板的 Javascript 進而使 User 受到攻擊，範例如下：</li><br>
+                                <pre class="language-txt"><code class="language-txt">我是壞人！ &lt;script>alert(1);&lt;/script></code></pre>
+                                <br>
+                            <br>
                             </ul>
                     </ol>
             </p>
@@ -198,8 +199,35 @@
         </div>
     </div><br><br><br>
 	
+	<div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">防範方式</h1><br>
+
+           <br><br><br>
+
+            <p style="text-align: left;">
+                    <ol style="font-size: 150%;text-align: left; list-style-type: katakana">
+                        <li>做好欄位輸入的驗證與檢查，不論是前後端都應假設輸入是惡意且不可信任的，例如：URL、檔案上傳、表單欄位、留言板等。</li><br>
+                        <li>文法與語意：應確認每個網頁表單輸入欄位是否為合理的資料類型與內容，例如：年齡的欄位在文法上應只接受0–9的數字，而語意上應確認此數字介於 0–120。</li><br>
+                        <li>像上述所說明的任何輸入和其他難以定義文法的自由格式，都應該要經過編碼成為純字符串來處理，防止內容被當作程式碼執行，許多程式框架都有提供內建的編碼函式庫，可以依自己的慣用語言程式查找並多加利用。</li><br>
+                        <li>絕對不要將使用者的輸入放入 註解、屬性名稱、標籤名稱 等，因為這些位置都能將字符串作為程式碼運行
+                        另外，於伺服器上可作以下設定增強瀏覽器的防護：</li><br>
+                        <ul style="font-size: 80%;">
+                            <li>對 cookie 設定 HttpOnly 的屬性，確保程式碼沒有存取權</li><br>
+                            <li>設定內容安全策略（CSP）的標頭，明確定義允許瀏覽器在該頁面上加載的內容來源，涵蓋的類型包括 JavaScriptCSS、HTML框架、字體、圖片和可嵌入對象，例如 Java applet、ActiveX等。</li><br>
+                        </ul>
+                    </ol>
+            </p>
+        </div>
+    </div>
+   
+   
     <br><br><br>
 	<footer>
+	    <p>
+	    相關新聞: <a href="https://www.ithome.com.tw/news/139205">Meetup安全漏洞可讓駭客接管社團以及金流</a>
+	    
+	    </p>
 		<p><small>
             <font size="5" face="serif">Takeda&nbspNana&nbsp&copyCopyright  2021</font>
 		</small></p>
