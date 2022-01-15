@@ -165,12 +165,36 @@
            <br><br><br>
 
             <p style="text-align: left;">
-                    <ol style="text-align: left;">
-                        <li>Hacker 在受害網站注入 XSS 漏洞</li>
-                        <li>透過社交工程手法傳送惡意 URL 給 User</li>
-                        <li>當User 點擊 URL 便會把自己的資料（cookie）藉由受害網站傳回給 Hacker</li>
+                    <ol style="font-size: 200%; list-style-type: square;text-align: left;">
+                        <li> 反射型 (Reflected)</li>
+                        <ul style="font-size: 80%; list-style-type: katakana;">
+                            <li>最常見的 XSS 攻擊類型，通常是將惡意程式會藏在網址列裡，放在 GET 參數傳遞，範例如下：<br>
+                            <pre class="language-txt"><code class="language-txt">http://www.example.com/upload.asp?id=&lt;script>alert(1);&lt;/script &gt;</code></pre>
+                            </li><br>
+                            <li>這種手法要能夠成功攻擊，需要使用社交工程釣魚的技巧，使 User 點擊URL 攻擊才會生效。</li>
+                            <li>因為 URL 通常看起來很詭異，所以 Hacker 通常會使用短網址或 HTML Encoder 註2的方式嘗試欺騙 User。</li>
+                        </ul>
+                        <li> DOM型</li>
+                           <ul style="font-size: 80%; list-style-type: katakana;">
+                            <li>這種手法和反射型 XSS一樣，都需要使用社交工程釣魚的技巧，使 User 點擊 URL 攻擊才會生效。<br>
+                            
+                            <li>Hacker 在 URL 輸入 DOM 註3 物件，把物件嵌入網頁程式碼，範例：</li>
+                            
+                            <pre class="language-txt"><code class="language-txt">&lt;img src=# onerror=”alert(123)”></code></pre>
+                            </li><br>
+                            </ul>
+                        <li> 儲存型 (Stored)</li>
+                             <ul style="font-size: 80%; list-style-type: katakana;">
+                            <li>與前兩種手法不同的是此種攻擊手法不需要使用社交工程釣魚的技巧，也能使 User 受到攻擊<br>
+                            
+                            <li>攻擊的方式是 Hacker 將 Javascript 儲存在伺服器的資料庫中，進而引起使 User 遭受攻擊。</li>
+                            <li>最常見的例子就是將 Javascript 注入留言板，當下一位 User 瀏覽網頁時，網頁會載入留言板的 Javascript 進而使 User 受到攻擊，範例如下：</li>
+                            <pre class="language-txt"><code class="language-txt">我是壞人！ &lt;script>alert(1);&lt;/script></code></pre>
+                            </li><br>
+                            </ul>
                     </ol>
             </p>
+            
         </div>
     </div><br><br><br>
 	
