@@ -79,13 +79,36 @@
         </nav>
     </div>
     <h1 id="P6" class="title-f">Forensics</h1>
-    &emsp;<a href="#top"></a>
+    &emsp;<a href="#top"><img src="img/caret-quare-up.png" alt=""></a>
+   
     <div class="container">
-        <div class="box">
-            <p>
-                <img  style="width: 65%;" src="img/code.PNG" alt=""><br><br><br>
-                <p>別把任何機密資用明文方式傳送，就算是source code亦同。</p> <br>
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">Hex Encode</h1><br>
+            <img style="width: 29%;" src="img/mask.png" alt=""><br><br><br><br>
+            <img src="img/chevron-double-down.png" alt=""><br><img src="img/chevron-double-down.png" alt="">
+            <br><br><br><br>
+            <img   src="img/hxd.PNG" alt="">
+            <p style="font-size: 150%;text-align: left;">
+               
+                <br><br><br>
+                &emsp;&emsp;在各種檔案之中，其編碼通常隱含著許多訊息，但多數是不需要被使用者知悉的資料。
+                此時，我們就會使用隱寫(Steganography)的方式，確保不讓除預期的接收者之外的任何人知曉資訊的傳遞事件或者資訊的內容。<br><br>
+                &emsp;&emsp;透過鑑識工具<sub><a href="#foot">[1]</a></sub>，我們可以找出用各種不同方式隱藏在文件、圖片、文字、檔案之中隱藏的資訊。<br>
+                <br>
             </p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box" style="width: 55%;">
+           <h1 class = "title-a">Packet analyzer</h1><br>
+           <img src="img/shark.png" style="width: 100%;" alt="">
+           <p style="font-size: 150%;text-align: left;">
+                <br><br><br>
+                &emsp;&emsp;上開這張圖係為封包攔截及分析程式WireShark操作介面。藉此，我們可以分析由各種協定包裝而成的各封包(Packet)內含的各種資料。<br>
+                <br>
+                <img src="img/tcp.png" style="width: 100%;" alt="">
+            </p>
+            
         </div>
     </div>
 
@@ -94,10 +117,31 @@
    <p style="text-align: right">
     返回top&emsp;<a href="#top"><img src="img/caret-quare-up.png" alt=""></a>
     </p>
+    
+    
+    <div id="foot" class="container">
+        <div class="box" style="width: 8%;">
+           <div id="foot" 
+              style="
+               border:1px #FFE4CA solid;
+               border-radius:10px;
+               
+               text-align: center;
+               font-size: 110;">
+                [1] Tools <br><br>
+                <a target="_blank" href="https://mh-nexus.de/en/hxd/">HxD editor</a><br>
+                <a target="_blank" href="https://www.wireshark.org/download.html">Wireshark</a><br>
+            </div>
+        </div>
+    </div>
+    
+    
     <br><br><br>
 	<footer>
 		<p><small>
-            <font size="5" face="serif">Takeda <br><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/tw/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/3.0/tw/88x31.png" /><a href=""></a><br>2021</font>
+            <font size="5" face="serif">
+                Takeda <br><a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/tw/"><img alt="創用 CC 授權條款" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/3.0/tw/88x31.png" /><a href=""></a><br>2021
+            </font>
 		</small></p>
 		<font size="10">
 		<span style="font-family: 'Mr De Haviland', cursive;">Takeda NaNa</span>
