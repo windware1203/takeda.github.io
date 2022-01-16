@@ -86,6 +86,7 @@ function genRot133()
 
     document.getElementById("rot13_str_11").innerHTML = rot13_qq;
 }
+
 function qq()
 {
     pionts += 10;
@@ -104,6 +105,7 @@ function q2()
     }
         
 }
+var cmt_q1 = 0;
 function rot13()
 {
     let ref = document.getElementById("fb1");
@@ -113,9 +115,11 @@ function rot13()
     {
         button.style.display = "none";
         pionts += 10;
+        pionts -= cmt_q1;
         rePoint();
-    }
+    }else cmt_q1++;
 }
+var cmt_q11 = 0;
 function rot13_11()
 {
     let ref = document.getElementById("fb11");
@@ -124,11 +128,48 @@ function rot13_11()
     if((ref.innerHTML=="O"))
     {
         button.style.display = "none";
-        pionts += 10;
+        pionts += 12;
+        pionts -= cmt_q11;
+        rePoint();
+    }else cmt_q11++;
+}
+/*
+    document.getElementById("rot13_output").value = document.getElementById("rot13_input").value.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});*/
+var cmt_q3 = 0;
+function q3()
+{
+    let bd = "ananPGS{c33xno00_1_f33_h_qrnqorrs}";
+    let ans =  bd.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
+    let ref = document.getElementById("fb3");
+    let input = document.getElementById("q3_flag").value;
+    let button = document.getElementById("b3");
+    (input == ans)? (ref.innerHTML="O") : (ref.innerHTML="X") ;
+    if((ref.innerHTML=="O"))
+    {
+        button.style.display = "none";
+        pionts += 14;
+        pionts -= cmt_q3;
+        rePoint();
+    }else cmt_q3++;
+}
+var cmt_q4 = 0;
+function q4()
+{
+    let bd = "ananPGS{8mCLLwccCb_18sNew05rqZL}";
+    let ans =  bd.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
+    let ref = document.getElementById("fb4");
+    let input = document.getElementById("q4_flag").value;
+    let button = document.getElementById("b4");
+    (input == ans)? (ref.innerHTML="O") : (ref.innerHTML="X") ;
+    if((ref.innerHTML=="O"))
+    {
+        button.style.display = "none";
+        pionts += 18;
+        pionts -= cmt_q4;
         rePoint();
     }
+    else cmt_q4++;
 }
-
 function submit()
 {
     var nameInput = document.getElementById("name");
