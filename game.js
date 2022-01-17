@@ -192,7 +192,7 @@ function q3()
     {
         ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        let get_pionts = (17-cmt_q3);
+        let get_pionts = (23-cmt_q3);
         pionts += get_pionts;
         alert("get "+get_pionts + " points !");
         
@@ -213,7 +213,7 @@ function q4()
     {
         ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        let get_pionts = (19-cmt_q4);
+        let get_pionts = (30-cmt_q4);
         pionts += get_pionts;
         alert("get "+get_pionts + " points !");
         
@@ -221,6 +221,49 @@ function q4()
     }
     else cmt_q4++;
     document.getElementById("error4").innerHTML = cmt_q4;
+}
+var cmt_p5 = 0;
+function p5()
+{
+    
+    let ans =  parseInt(hexSTring,16);
+    let ref = document.getElementById("fb-p5");
+    let input = document.getElementById("p5_flag").value;
+    let button = document.getElementById("b-p5");
+    (input == ans)? (ref.innerHTML="O") : (ref.innerHTML="<img src = img/incorrect.png>") ;
+    if(ref.innerHTML=="O")
+    {
+        ref.innerHTML = "<img src = img/correct.png>";
+        button.style.display = "none";
+        let get_pionts = (25-(cmt_p5*cmt_p5));
+        pionts += get_pionts;
+        alert("get " +get_pionts + " points !");
+        
+        rePoint();
+    }
+    else cmt_p5++;
+    document.getElementById("error-p5").innerHTML = cmt_p5;
+}
+var cmt_p55 = 0;
+function p55()
+{
+    let ans =  dec_hex; 
+    let ref = document.getElementById("fb-p55");
+    let input = document.getElementById("p55_flag").value;
+    let button = document.getElementById("b-p55");
+    (input == ans)? (ref.innerHTML="O") : (ref.innerHTML="<img src = img/incorrect.png>") ;
+    if(ref.innerHTML=="O")
+    {
+        ref.innerHTML = "<img src = img/correct.png>";
+        button.style.display = "none";
+        let get_pionts = (25 - (cmt_p55*cmt_p55));
+        pionts += get_pionts;
+        alert("get " +get_pionts + " points !");
+        
+        rePoint();
+    }
+    else cmt_p55++;
+    document.getElementById("error-p55").innerHTML = cmt_p55;
 }
 var cmt_robot = 0;
 function robot()
@@ -244,6 +287,22 @@ function robot()
     else cmt_robot++;
     document.getElementById("error-robot").innerHTML = cmt_robot;
 }
+var hexSTring = "";
+function hex()
+{
+    var a = getRandomInt(1000).toString(16);
+    hexSTring = a;
+    document.getElementById("hex").innerHTML = a;
+}
+var decSTring = "";
+var dec_hex = "";
+function dec()
+{
+    var a = getRandomInt(1000);
+    decSTring = a;
+    dec_hex = a.toString(16);
+    document.getElementById("dec").innerHTML = a;
+}
 function submit()
 {
     var nameInput = document.getElementById("name");
@@ -265,6 +324,8 @@ function init()
     rePoint();
     fullCharArr();
     genRot13();
+    hex();
+    dec();
     genRot133();
     genRot1333();
     document.getElementById("error1").innerHTML = cmt_q1;
@@ -273,6 +334,8 @@ function init()
     document.getElementById("error2").innerHTML = cmt_q2;
     document.getElementById("error3").innerHTML = cmt_q3;
     document.getElementById("error4").innerHTML = cmt_q4;
+    document.getElementById("error-p5").innerHTML = cmt_p5;
+    document.getElementById("error-p55").innerHTML = cmt_p55;
     document.getElementById("error-robot").innerHTML = cmt_robot;
 }
 function rePoint()
