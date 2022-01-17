@@ -87,22 +87,24 @@ function genRot133()
     document.getElementById("rot13_str_11").innerHTML = rot13_qq;
 }
 
-function qq()
-{
-    pionts += 10;
-        rePoint();
-}
+var cmt_q2 = 0;
 function q2()
 {
+    let bd = "ananPGS{qUWqqtqs_w;q;;tqtsq}";
+    let ans =  bd.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
     let ref = document.getElementById("fb2");
+    let input = document.getElementById("q2_flag").value;
     let button = document.getElementById("b2");
-    (document.getElementById("q2_flag").value == "nanaCTF{dHJddgdf_j;d;;gdgfd}") ? (ref.innerHTML="O") : (ref.innerHTML="X") ;
-    if((ref.innerHTML=="O"))
+    (input == ans)? (ref.innerHTML="O") : (ref.innerHTML="<img src = img/incorrect.png>") ;
+    if(ref.innerHTML=="O")
     {
+        ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        pionts += 10;
+        let get_pionts = (15-cmt_q2);
+        pionts += get_pionts;
+        alert("get "+get_pionts + " points !");
         rePoint();
-    }
+    }else cmt_q2++;
         
 }
 var cmt_q1 = 0;
@@ -110,12 +112,14 @@ function rot13()
 {
     let ref = document.getElementById("fb1");
     let button = document.getElementById("b1");
-    (document.getElementById("rot13_output").value == rot13_q.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})) ? (ref.innerHTML="O") : (ref.innerHTML="X") ;
-    if((ref.innerHTML=="O"))
+    (document.getElementById("rot13_output").value == rot13_q.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})) ? (ref.innerHTML="O") : (ref.innerHTML="<img src = img/incorrect.png>") ;
+    if(ref.innerHTML=="O")
     {
+        ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        pionts += 10;
-        pionts -= cmt_q1;
+        let get_pionts = (10-cmt_q1);
+        pionts += get_pionts;
+        alert("get "+get_pionts + " points !");
         rePoint();
     }else cmt_q1++;
 }
@@ -124,12 +128,14 @@ function rot13_11()
 {
     let ref = document.getElementById("fb11");
     let button = document.getElementById("b11");
-    (document.getElementById("rot13_output_11").value == rot13_qq.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})) ? (ref.innerHTML="O") : (ref.innerHTML="X") ;
-    if((ref.innerHTML=="O"))
+    (document.getElementById("rot13_output_11").value == rot13_qq.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})) ? (ref.innerHTML="O") : (ref.innerHTML="<img src = img/incorrect.png>") ;
+    if(ref.innerHTML=="O")
     {
+        ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        pionts += 12;
-        pionts -= cmt_q11;
+        let get_pionts = (12-cmt_q11);
+        pionts += get_pionts;
+        alert("get "+get_pionts + " points !");
         rePoint();
     }else cmt_q11++;
 }
@@ -143,12 +149,14 @@ function q3()
     let ref = document.getElementById("fb3");
     let input = document.getElementById("q3_flag").value;
     let button = document.getElementById("b3");
-    (input == ans)? (ref.innerHTML="O") : (ref.innerHTML="X") ;
-    if((ref.innerHTML=="O"))
+    (input == ans)? (ref.innerHTML="O") : (ref.innerHTML="<img src = img/incorrect.png>") ;
+    if(ref.innerHTML=="O")
     {
+        ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        pionts += 14;
-        pionts -= cmt_q3;
+        let get_pionts = (17-cmt_q3);
+        pionts += get_pionts;
+        alert("get "+get_pionts + " points !");
         rePoint();
     }else cmt_q3++;
 }
@@ -160,15 +168,37 @@ function q4()
     let ref = document.getElementById("fb4");
     let input = document.getElementById("q4_flag").value;
     let button = document.getElementById("b4");
-    (input == ans)? (ref.innerHTML="O") : (ref.innerHTML="X") ;
-    if((ref.innerHTML=="O"))
+    (input == ans)? (ref.innerHTML="O") : (ref.innerHTML="<img src = img/incorrect.png>") ;
+    if(ref.innerHTML=="O")
     {
+        ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        pionts += 18;
-        pionts -= cmt_q4;
+        let get_pionts = (19-cmt_q4);
+        pionts += get_pionts;
+        alert("get "+get_pionts + " points !");
         rePoint();
     }
     else cmt_q4++;
+}
+var cmt_robot = 0;
+function robot()
+{
+    let bd = "ananPGS{fEV_iweEWVcbf1*-Zbs}";
+    let ans =  bd.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});
+    let ref = document.getElementById("fb-robot");
+    let input = document.getElementById("robot_flag").value;
+    let button = document.getElementById("b-robot");
+    (input == ans)? (ref.innerHTML="O") : (ref.innerHTML="<img src = img/incorrect.png>") ;
+    if(ref.innerHTML=="O")
+    {
+        ref.innerHTML = "<img src = img/correct.png>";
+        button.style.display = "none";
+        let get_pionts = (25-cmt_robot);
+        pionts += get_pionts;
+        alert("get " +get_pionts + " points !");
+        rePoint();
+    }
+    else cmt_robot+= 2;
 }
 function submit()
 {

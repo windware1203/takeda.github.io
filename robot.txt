@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /index.htm
 
-nanaCTF{sRI_vjrRJIpos1*-Mof}
+# nanaCTF{sRI_vjrRJIpos1*-Mof}
