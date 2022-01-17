@@ -13,13 +13,7 @@ var rankName = ["菜雞I", "菜雞II", "菜雞III", "平民I", "平民II",
 
 var rank = 0;
 
-function init()
-{
-    rePoint();
-    fullCharArr();
-    genRot13();
-    genRot133();
-}
+
 function fullCharArr()
 {
     for(var i = 0 ; i<26 ;i++)
@@ -46,7 +40,7 @@ var rot13_q = "";
 function genRot13()
 {
     
-    for(var i = 0 ; i<26 ;i++)
+    for(var i = 0 ; i<30 ;i++)
     {
         let x = getRandomInt(50);
         let y = getRandomInt(50);
@@ -68,7 +62,30 @@ var rot13_qq = "";
 function genRot133()
 {
     
-    for(var i = 0 ; i<26 ;i++)
+    for(var i = 0 ; i<28 ;i++)
+    {
+        let x = getRandomInt(50);
+        let y = getRandomInt(50);
+        let temp = 0;
+        
+        temp = charArr[x+1];
+        charArr[x+1] = charArr[y];
+        charArr[y] = temp;
+ 
+    }
+    
+    for(var i = 0 ; i<5 ;i++)
+        rot13_qq += charArr[i];
+
+
+    document.getElementById("rot13_str_11").innerHTML = rot13_qq;
+}
+
+var rot13_qqq = "";
+function genRot1333()
+{
+    
+    for(var i = 0 ; i<27 ;i++)
     {
         let x = getRandomInt(50);
         let y = getRandomInt(50);
@@ -81,12 +98,28 @@ function genRot133()
     }
     
     for(var i = 0 ; i<5 ;i++)
-        rot13_qq += charArr[i];
+        rot13_qqq += charArr[i];
 
 
-    document.getElementById("rot13_str_11").innerHTML = rot13_qq;
+    document.getElementById("rot13_str_111").innerHTML = rot13_qqq;
 }
-
+var cmt_q111 = 0;
+function rot13_111()
+{
+    let ref = document.getElementById("fb111");
+    let button = document.getElementById("b111");
+    (document.getElementById("rot13_output_111").value == rot13_qqq.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})) ? (ref.innerHTML="O") : (ref.innerHTML="<img src = img/incorrect.png>") ;
+    if(ref.innerHTML=="O")
+    {
+        ref.innerHTML = "<img src = img/correct.png>";
+        button.style.display = "none";
+        let get_pionts = (17-cmt_q111);
+        pionts += get_pionts;
+        alert("get "+get_pionts + " points !");
+        rePoint();
+    }else cmt_q111++;
+    document.getElementById("error111").innerHTML = cmt_q111;
+}
 var cmt_q2 = 0;
 function q2()
 {
@@ -103,9 +136,10 @@ function q2()
         let get_pionts = (15-cmt_q2);
         pionts += get_pionts;
         alert("get "+get_pionts + " points !");
+        
         rePoint();
     }else cmt_q2++;
-        
+     document.getElementById("error2").innerHTML = cmt_q2;   
 }
 var cmt_q1 = 0;
 function rot13()
@@ -120,8 +154,10 @@ function rot13()
         let get_pionts = (10-cmt_q1);
         pionts += get_pionts;
         alert("get "+get_pionts + " points !");
+        
         rePoint();
     }else cmt_q1++;
+    document.getElementById("error1").innerHTML = cmt_q1;
 }
 var cmt_q11 = 0;
 function rot13_11()
@@ -136,8 +172,10 @@ function rot13_11()
         let get_pionts = (12-cmt_q11);
         pionts += get_pionts;
         alert("get "+get_pionts + " points !");
+        
         rePoint();
     }else cmt_q11++;
+    document.getElementById("error11").innerHTML = cmt_q11;
 }
 /*
     document.getElementById("rot13_output").value = document.getElementById("rot13_input").value.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});*/
@@ -157,8 +195,10 @@ function q3()
         let get_pionts = (17-cmt_q3);
         pionts += get_pionts;
         alert("get "+get_pionts + " points !");
+        
         rePoint();
     }else cmt_q3++;
+    document.getElementById("error3").innerHTML = cmt_q3;
 }
 var cmt_q4 = 0;
 function q4()
@@ -176,9 +216,11 @@ function q4()
         let get_pionts = (19-cmt_q4);
         pionts += get_pionts;
         alert("get "+get_pionts + " points !");
+        
         rePoint();
     }
     else cmt_q4++;
+    document.getElementById("error4").innerHTML = cmt_q4;
 }
 var cmt_robot = 0;
 function robot()
@@ -193,12 +235,14 @@ function robot()
     {
         ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        let get_pionts = (25-cmt_robot);
+        let get_pionts = (25-(cmt_robot*2));
         pionts += get_pionts;
         alert("get " +get_pionts + " points !");
+        
         rePoint();
     }
-    else cmt_robot+= 2;
+    else cmt_robot++;
+    document.getElementById("error-robot").innerHTML = cmt_robot;
 }
 function submit()
 {
@@ -216,7 +260,21 @@ function submit()
     }
     
 }
-
+function init()
+{
+    rePoint();
+    fullCharArr();
+    genRot13();
+    genRot133();
+    genRot1333();
+    document.getElementById("error1").innerHTML = cmt_q1;
+    document.getElementById("error11").innerHTML = cmt_q11;
+    document.getElementById("error111").innerHTML = cmt_q111;
+    document.getElementById("error2").innerHTML = cmt_q2;
+    document.getElementById("error3").innerHTML = cmt_q3;
+    document.getElementById("error4").innerHTML = cmt_q4;
+    document.getElementById("error-robot").innerHTML = cmt_robot;
+}
 function rePoint()
 {
     document.getElementById("score").innerHTML = pionts;
