@@ -103,23 +103,7 @@ function genRot1333()
 
     document.getElementById("rot13_str_111").innerHTML = rot13_qqq;
 }
-var cmt_q111 = 0;
-function rot13_111()
-{
-    let ref = document.getElementById("fb111");
-    let button = document.getElementById("b111");
-    (document.getElementById("rot13_output_111").value == rot13_qqq.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})) ? (ref.innerHTML="O") : (ref.innerHTML="<img src = img/incorrect.png>") ;
-    if(ref.innerHTML=="O")
-    {
-        ref.innerHTML = "<img src = img/correct.png>";
-        button.style.display = "none";
-        let get_pionts = (17-cmt_q111);
-        pionts += get_pionts;
-        alert("get "+get_pionts + " points !");
-        rePoint();
-    }else cmt_q111++;
-    document.getElementById("error111").innerHTML = cmt_q111;
-}
+
 var cmt_q2 = 0;
 function q2()
 {
@@ -139,7 +123,8 @@ function q2()
         
         rePoint();
     }else cmt_q2++;
-     document.getElementById("error2").innerHTML = cmt_q2;   
+     document.getElementById("error2").innerHTML = cmt_q2; 
+    if(cmt_q2 == 3)document.getElementById("hint_2").style.display = "block";
 }
 var cmt_q1 = 0;
 function rot13()
@@ -158,6 +143,7 @@ function rot13()
         rePoint();
     }else cmt_q1++;
     document.getElementById("error1").innerHTML = cmt_q1;
+    if(cmt_q1 == 3)document.getElementById("hint_1").style.display = "block";
 }
 var cmt_q11 = 0;
 function rot13_11()
@@ -176,6 +162,25 @@ function rot13_11()
         rePoint();
     }else cmt_q11++;
     document.getElementById("error11").innerHTML = cmt_q11;
+    if(cmt_q11 == 3)document.getElementById("hint_11").style.display = "block";
+}
+var cmt_q111 = 0;
+function rot13_111()
+{
+    let ref = document.getElementById("fb111");
+    let button = document.getElementById("b111");
+    (document.getElementById("rot13_output_111").value == rot13_qqq.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);})) ? (ref.innerHTML="O") : (ref.innerHTML="<img src = img/incorrect.png>") ;
+    if(ref.innerHTML=="O")
+    {
+        ref.innerHTML = "<img src = img/correct.png>";
+        button.style.display = "none";
+        let get_pionts = (17-cmt_q111);
+        pionts += get_pionts;
+        alert("get "+get_pionts + " points !");
+        rePoint();
+    }else cmt_q111++;
+    document.getElementById("error111").innerHTML = cmt_q111;
+    if(cmt_q111 == 3)document.getElementById("hint_111").style.display = "block";
 }
 /*
     document.getElementById("rot13_output").value = document.getElementById("rot13_input").value.replace(/[a-zA-Z]/g,function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);});*/
@@ -199,6 +204,7 @@ function q3()
         rePoint();
     }else cmt_q3++;
     document.getElementById("error3").innerHTML = cmt_q3;
+    if(cmt_q3 == 3)document.getElementById("hint_3").style.display = "block";
 }
 var cmt_q4 = 0;
 function q4()
@@ -221,6 +227,7 @@ function q4()
     }
     else cmt_q4++;
     document.getElementById("error4").innerHTML = cmt_q4;
+    if(cmt_q4 == 3)document.getElementById("hint_4").style.display = "block";
 }
 var cmt_p5 = 0;
 function p5()
@@ -286,6 +293,7 @@ function robot()
     }
     else cmt_robot++;
     document.getElementById("error-robot").innerHTML = cmt_robot;
+    if(cmt_robot == 3)document.getElementById("hint_ro").style.display = "block";
 }
 var hexSTring = "";
 function hex()
