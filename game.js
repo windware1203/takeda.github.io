@@ -9,7 +9,7 @@ var rankImg = ["img/0.png", "img/1.png", "img/2.png", "img/3.png", "img/4.png",
 var rankName = ["菜雞I", "菜雞II", "菜雞III", "平民I", "平民II",
                "平民III", "老鳥I", "老鳥II", "老鳥III", "一二三",
                "二二三", "三二三", "一枝獨秀", "兩枝獨秀", "三枝獨秀",
-               "資科猩猩", "MP沒有力量", "你是神", "你是鬼", "你是武田"];
+               "資科猩猩", "MP沒有力量", "林森北土龍", "沙鹿黑狗", "烏日武田"];
 
 var rank = 0;
 
@@ -117,7 +117,7 @@ function q2()
     {
         ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        let get_pionts = (15-cmt_q2);
+        let get_pionts = (17-cmt_q2);
         pionts += get_pionts;
         alert("get "+get_pionts + " points !");
         
@@ -136,7 +136,7 @@ function rot13()
     {
         ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        let get_pionts = (10-cmt_q1);
+        let get_pionts = (7-cmt_q1);
         pionts += get_pionts;
         alert("get "+get_pionts + " points !");
         
@@ -155,7 +155,7 @@ function rot13_11()
     {
         ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        let get_pionts = (12-cmt_q11);
+        let get_pionts = (13-cmt_q11);
         pionts += get_pionts;
         alert("get "+get_pionts + " points !");
         
@@ -219,7 +219,7 @@ function q4()
     {
         ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        let get_pionts = (30-cmt_q4);
+        let get_pionts = (31-cmt_q4);
         pionts += get_pionts;
         alert("get "+get_pionts + " points !");
         
@@ -242,7 +242,7 @@ function p5()
     {
         ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        let get_pionts = (25-(cmt_p5*cmt_p5));
+        let get_pionts = (27-(cmt_p5*cmt_p5));
         pionts += get_pionts;
         alert("get " +get_pionts + " points !");
         
@@ -263,7 +263,7 @@ function p55()
     {
         ref.innerHTML = "<img src = img/correct.png>";
         button.style.display = "none";
-        let get_pionts = (25 - (cmt_p55*cmt_p55));
+        let get_pionts = (29 - (cmt_p55*cmt_p55));
         pionts += get_pionts;
         alert("get " +get_pionts + " points !");
         
