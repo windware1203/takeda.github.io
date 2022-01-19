@@ -314,10 +314,24 @@ function submit()
         var login = document.getElementById("login");
         login.style.display = "none";
         document.getElementById("gameBox").style.display = "block";
-
         document.getElementById("nameHTML").innerHTML = "Hi, " + name;
+        if(name == "takeda105")
+        {
+            var password = prompt("Enter password");
+            if(password == "105105")
+            {
+                document.getElementById("admin").style.display = "block";
+                alert("歡迎歸來，南屯烏日東區黑龍 武田老大!");
+            }
+            else alert("還想裝是武田阿!");
+        }
     }
     
+}
+ function admit()
+{
+     pionts +=10;
+     rePoint();
 }
 function init()
 {
