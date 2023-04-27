@@ -322,7 +322,7 @@ function submit()
         var login = document.getElementById("login");
         login.style.display = "none";
         document.getElementById("gameBox").style.display = "block";
-        document.getElementById("nameHTML").innerHTML = "Hi, " + name;
+        document.getElementById("nameHTML").textContent  = "Hi, " + name;
         if(name == "takeda105")
         {
             var password = prompt("Enter password");
