@@ -100,9 +100,11 @@ function rsa()
             d++;
         }
         process.innerHTML  += ("<span style='background-color: #00FFFF;'>&nbsp;&nbsp; p = " + p + ", q = " + q +"&nbsp;&nbsp;<br><br></span>");//#BCB8B1
+        
         process.innerHTML  += ("<span style='background-color: yellow;'> &nbsp;&nbsp;n = p * q </sapn>&nbsp;&nbsp;<br><br>"
         + "<span style='background-color: #00FFFF;'>&nbsp;&nbsp;"
         + n + " = " + p + " * " + q +"&nbsp;&nbsp;<br><br></span>");
+        
         process.innerHTML += ("<span style='background-color: yellow;'>&nbsp;&nbsp;&phi; (n) = r = (p-1) * (q-1) </sapn>&nbsp;&nbsp;<br><br>" 
         + "<span style='background-color: #00FFFF;'>&nbsp;&nbsp;"
         + r + " = " + (p-1) + " * " + (q-1) +"&nbsp;&nbsp;<br><br></span>");
